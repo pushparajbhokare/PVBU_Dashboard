@@ -1,0 +1,921 @@
+<!--
+=========================================================
+* Material Dashboard 2 - v3.0.4
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/material-dashboard
+* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+* Licensed under MIT (https://www.creative-tim.com/license)
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="../../assets/img/favicon.png">
+    <title>
+        QDAS Analytics Dashboard
+    </title>
+    <!--     Fonts and icons     -->
+    <link href="../../../CSS/googleapis_family.css" rel="stylesheet" />
+    <!-- Nucleo Icons -->
+    <link href="../../assets/css/nucleo-icons.css" rel="stylesheet" />
+
+    <link href="../../assets/css/nucleo-svg.css" rel="stylesheet" />
+     <!-- Font Awesome Icons -->
+    <!-- <script src="../../JS/kitfontawe.js"></script> -->
+    <!-- <script src="../../JS/kitfontawe.js"></script>
+    <link href="../../../CSS/fonts_googleapis.css" rel="stylesheet" /> -->
+    <!-- CSS Files -->
+    <link id="pagestyle" href="../../assets/css/material-dashboard.css?v=3.0.4" rel="stylesheet" />
+    <!-- additional custom CSS Files -->
+    <link id="customstyle" href="../../assets/css/other_addition.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../assets/css/tata.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+
+    <style>
+    </style>
+</head>
+
+<body class="g-sidenav-show  bg-gray-200" code="2X2_MATRIX.VIEW_2x2_MATRIX">
+    <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark" id="sidenav-main">
+        <!--<div class="sidenav-header">
+            <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
+            <a class="navbar-brand m-0" href="../CVBU/index.html" target="_blank">
+                <img src="../../assets/img/logo-ct.png" class="navbar-brand-img h-100" alt="main_logo">
+                <span class="ms-1 font-weight-bold text-white">Q-DAS Quality System</span>
+            </a>
+        </div>
+        <hr class="horizontal light mt-0 mb-2">
+        <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
+            <ul class="navbar-nav">
+                <li class="nav-item" PERMISSION_CODE="CVBU.VIEW_CVBU">
+                    <a class="nav-link text-white " href="../CVBU/index.html">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <img src="../../img/icons/dashboard.svg" width="20" alt="">
+                        </div>
+                        <span class="nav-link-text ms-1">CVBU-Overview</span>
+
+                    </a>
+                </li>
+
+
+                <li class="nav-item" PERMISSION_CODE="PLANT_STATUS.VIEW_PLANT_STATUS">
+                    <a class="nav-link text-white  " href="../plantStatus/index.html">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <img src="../../img/icons/inventory.svg" width="20" alt="">-->
+                            <!-- <span class="material-icons opacity-10">
+                              inventory
+                              </span> -->
+                        <!--</div>
+                        <span class="nav-link-text ms-1">Plant Status</span>
+                    </a>
+                </li>-->
+                <!-- <li class="nav-item">
+                  <a class="nav-link text-white " href="../AreaExplorer/index.html">
+                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                       <img src="../../img/icons/area_chart.svg"   width="20" alt="">
+                    </div>
+                    <span class="nav-link-text ms-1">Area Explorer</span>
+                  </a>
+                </li>
+                 <li class="nav-item">
+                  <a class="nav-link text-white " href="../ModalExplorer/index.html">
+                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                       <img src="../../img/icons/explore.svg"   width="20" alt="">
+                    </div>
+                   <span class="nav-link-text ms-1">Model Explorer</span>
+                  </a>
+                </li> -->
+                <!--<li class="nav-item" PERMISSION_CODE="CHAR_EXPLORER.VIEW_CHAR_EXPLORER">
+                    <a class="nav-link text-white " href="../CharacteristicExplorer/index.html">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <img src="../../img/icons/data_exploration.svg" width="20" alt="">-->
+                            <!-- <span class="material-icons opacity-10">
+                              data_exploration
+                              </span> -->
+                        <!--</div>
+                        <span class="nav-link-text ms-1">Characteristic Explorer</span>
+                    </a>
+                </li>
+                <li class="nav-item" PERMISSION_CODE="TARGET_INSPECTION.VIEW_TARGET_INSPECTION">
+                    <a class="nav-link text-white " href="../TargetInspection/index.html">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <img src="../../img/icons/data_exploration.svg" width="20" alt="">
+
+
+                        </div>
+                        <span class="nav-link-text ms-1">Target Inspection</span>
+                    </a>
+                </li>
+                <li class="nav-item" PERMISSION_CODE="2X2_MATRIX.VIEW_2x2_MATRIX">
+                    <a class="nav-link text-white active bg-gradient-primary" href="../2x2matrix/index.html">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <img src="../../img/icons/table_view.svg" width="20" alt="">
+
+                        </div>
+                        <span class="nav-link-text ms-1" id="showPageName">2X2 Risk Matrix</span>
+                    </a>
+                </li>-->
+                <!-- <li class="nav-item">
+                  <a class="nav-link text-white " href="../dashboard2/index.html">
+                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                       <img src="../../img/icons/dashboard.svg"   width="30" alt="">
+                    </div>
+                    <span class="nav-link-text ms-1">Dashboard_1</span>
+                  </a>
+                </li> -->
+
+            <!--</ul>
+        </div>
+        <div class="sidenav-footer position-absolute w-100 bottom-0 ">
+            <div class="mx-3">
+                <img src="../../assets/img/logos/tata_motors_logo.png" style="height:auto; width:100%" />
+                <ref>
+                    <a class="btn bg-gradient-primary mt-4 w-100" href="https://www.creative-tim.com/product/material-dashboard-pro?ref=sidebarfree" type="button">Upgrade to pro</a>
+                </ref>
+            </div>
+        </div>-->
+    </aside>
+    <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+        <!-- Navbar -->
+        <div id="displayNAV"></div>
+        <!--<nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" data-scroll="true">
+            <div class="container-fluid py-1 px-3">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+                        <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a></li>
+                        <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Dashboard</li>
+                    </ol>
+                    <h6 class="font-weight-bolder mb-0">Management Dashboard</h6>
+                </nav>
+                <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
+                    <div class=" text-dark " style="margin: auto;">This page is for reference only.Data present is notional</div>
+
+                    <div class="ms-md-auto pe-md-3 d-flex align-items-center">-->
+                        <!--  <div class="input-group input-group-outline">
+                      <label class="form-label">Type here...</label>
+                      <input type="text" class="form-control">
+                    </div> -->
+                    <!--</div>
+                    <ul class="navbar-nav  justify-content-end">
+                        <ref>
+                            <li class="nav-item d-flex align-items-center">
+                                <a class="btn btn-outline-primary btn-sm mb-0 me-3" target="_blank" href="https://www.creative-tim.com/builder/material?ref=navbar-dashboard">Online Builder</a>
+                            </li>
+                        </ref>
+                        <li class="nav-item d-flex align-items-center">
+                            <a href="#" class="nav-link text-body font-weight-bold px-0">
+                                <i class="fa fa-user me-sm-1"></i>
+                                <span class="d-sm-inline d-none">Manager: Rohit</span>
+                            </a>
+                        </li>
+                        <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
+                            <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
+                                <div class="sidenav-toggler-inner">
+                                    <i class="sidenav-toggler-line"></i>
+                                    <i class="sidenav-toggler-line"></i>
+                                    <i class="sidenav-toggler-line"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item px-3 d-flex align-items-center">
+                            <a href="javascript:;" class="nav-link text-body p-0">
+                                <i class="fa fa-cog fixed-plugin-button-nav cursor-pointer"></i>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>-->
+        <!-- End Navbar -->
+        <div class="container-fluid py-4">
+            <div class="card p-0" style="margin-bottom:10px!important;">
+                <div class="card-body ">
+
+                    <div class="row align-items-center">
+
+                        <div class="col-sm-10">
+
+                            <div class="row align-items-center">
+                                <div class="col-sm-3">
+
+                                    <span class="">Plant </span>
+                                    <select id="plant_id" class="form-select mt-1 p-2" aria-label="Default select example">
+                                        <option value="">All</option>
+                                        <option value="">Pune</option>
+                                        <option value="">Lucknow</option>
+                                        <option value="">Pantnagar</option>
+                                        <option value="">Dharwad</option>
+                                        <option value="">Jamshedpur</option>
+                                    </select>
+
+                                </div>
+                                <div class="col-sm-3">
+
+                                    <span class="">Factory</span>
+                                    <select id="Area_id" class="form-select mt-1 p-2" aria-label="Default select example">
+                                        <option value="">All</option>
+                                        <option value="">Factory_1</option>
+                                        <option value="">Factory_2</option>
+                                        <option value="">Factory_3</option>
+
+                                    </select>
+
+                                </div>
+                                <div class="col-sm-3">
+
+                                    <span class="">Area </span>
+                                    <select id="Area_id" class="form-select mt-1 p-2" aria-label="Default select example">
+                                        <option value="">All</option>
+
+                                        <option value="">ENG</option>
+                                        <option value="">GRB</option>
+                                        <option value="">Machine</option>
+
+                                    </select>
+
+                                </div>
+                                <div class="col-sm-3">
+
+                                    <span>Component  </span>
+                                    <select id="component_id" class="form-select mt-1 p-2" aria-label="Default select example">
+                                        <option value="">All</option>
+                                        <option value="">component 1</option>
+                                        <option value="">component 2</option>
+                                        <option value="">component 3</option>
+                                    </select>
+
+                                </div>
+                                <div class="col-sm-3">
+
+                                    <span>Model </span>
+                                    <select id="model_id" class="form-select mt-1 p-2" aria-label="Default select example">
+                                        <option value="">All</option>
+                                        <option value="">Model 1</option>
+                                        <option value="">Model 2</option>
+                                        <option value="">Model 3</option>
+                                        <option value="">Model 4</option>
+
+                                    </select>
+
+                                </div>
+
+
+
+                                <div class="col-sm-3">
+                                    <span>Char Class</span>
+                                    <div class="input-group input-group-outline ">
+                                        <select id="ctqall_id" class="form-select mt-1 p-2" aria-label="Default select example">
+                                            <option value="">All</option>
+                                            <option value="">CTQ 1</option>
+                                            <option value="">CTQ 2</option>
+                                            <option value="">CTQ 3</option>
+                                            <option value="">CTQ 4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <span>Machine</span>
+                                    <div class="input-group input-group-outline ">
+                                        <select id="machine_id" class="form-select mt-1 p-2" aria-label="Default select example">
+                                            <option value="">All</option>
+                                            <option value="">Machine 1</option>
+                                            <option value="">Machine 2</option>
+                                            <option value="">Machine 3</option>
+                                            <option value="">Machine 4</option>
+                                        </select>
+
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="col-sm-2">
+
+                            <button type="button" class="btn btn-info m-0 " onclick="processRefresh()">Refresh</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card my-4">
+                        <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                            <div class="bg-tata-title shadow-primary border-radius-lg pt-4 pb-3">
+                                <h6 class="text-white text-capitalize ps-3">Current Risk Matrix</h6>
+                            </div>
+                        </div>
+                        <div class="card-body px-0 pb-2">
+                            <div class="datePicker ps-3 pb-3 pe-3">
+                                <ref>https://codepen.io/maheshambure21/pen/VYJQYG</ref>
+                                <div val="start">
+                                    <label for="dateOfStart">Date of Start</label>
+                                    <input type="date" class="datePickerInput" name="dateOfStart">
+                                </div>
+                                <div val="End">
+                                    <label for="dateOfEnd ps-3 mx-3">Date of End</label>
+                                    <input type="date" class="datePickerInput" name="dateOfEnd">
+                                </div>
+                            </div>
+                            <div class="riskMatrix px-4 py-2 text-center">
+                                <div class="boxDetail"></div>
+                                <div class="boxColumnDetail">
+                                    <h6 class="mb-0 text-sm">Un-Stable</h6>
+                                    <!-- <span style="font-size: x-small;">Ppk &gt; 1.33, Pp &gt; 1.67</span> -->
+                                    <br />
+                                    <!-- <img src="../../assets/img/small-logos/emptyCircle.svg" width="16" height="16"> -->
+                                </div>
+                                <div class="boxColumnDetail">
+                                    <h6 class="mb-0 text-sm">Stable</h6>
+                                    <!-- <span style="font-size: x-small;">Ppk &gt; 1.33, Pp &gt; 1.67</span> -->
+                                    <br />
+                                    <!-- <img src="../../assets/img/small-logos/fullCircle.svg" width="16" height="16"> -->
+                                </div>
+                                <div class="boxRowDetail">
+                                    <h6 class="mb-0 text-sm">Not-Capable</h6>
+                                    <!-- <span style="font-size: x-small;">Cpk &gt; 1.33, Cp &gt; 1.67</span> -->
+                                    <br />
+                                    <img src="../../assets/img/small-logos/emptyCircle.svg" width="16" height="16">
+                                </div>
+                                <!-- onclick="clickrouteToCharacteristics()" -->
+                                <div class="box bg-gradient-danger">
+                                    <span class="badge">Quadrant-I</span>
+                                    <h4 class="mb-0 text-white ctqSpan">CTQ = 10</h4>
+                                </div>
+                                <div class="box bg-gradient-warning">
+                                    <span class="badge">Quadrant-II</span>
+                                    <h4 class="mb-0 text-white ctqSpan">CTQ = 20</h4>
+                                </div>
+                                <div class="boxRowDetail" >
+                                    <h6 class="mb-0 text-sm">Capable</h6>
+                                    <!-- <span style="font-size: x-small;">Cpk &lt; 1.33, Cp &lt; 1.67</span> -->
+                                    <br />
+                                    <!-- <img src="../../assets/img/small-logos/fullCircle.svg" width="16" height="16"> -->
+                                    <br />
+                                </div>
+                                <div class="box bg-gradient-info">
+                                    <span class="badge">Quadrant-III</span>
+                                    <h4 class="mb-0 text-white ctqSpan">CTQ = 23</h4>
+                                </div>
+                                <div class="box bg-gradient-success">
+                                    <span class="badge">Quadrant-IV</span>
+                                    <h4 class="mb-0 text-white ctqSpan">CTQ = 16</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card my-4">
+                        <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                            <div class="bg-plant-title shadow-primary border-radius-lg pt-4 pb-3">
+                                <h6 class="text-white text-capitalize ps-3">historical Risk Matrix</h6>
+                            </div>
+                        </div>
+                        <div class="card-body px-0 pb-2">
+                            <div class="datePicker ps-3 pb-3 pe-3">
+                                <ref>https://codepen.io/maheshambure21/pen/VYJQYG</ref>
+                                <div val="start">
+                                    <label for="dateOfStart">Date of Start</label>
+                                    <input type="date" class="datePickerInput" name="dateOfStart">
+                                </div>
+                                <div val="End">
+                                    <label for="dateOfEnd ps-3 mx-3">Date of End</label>
+                                    <input type="date" class="datePickerInput" name="dateOfEnd">
+                                </div>
+                            </div>
+                            <div class="riskMatrix px-4 py-2 text-center">
+                                <div class="boxDetail"></div>
+                                <div class="boxColumnDetail">
+                                    <h6 class="mb-0 text-sm">Un-Stable</h6>
+                                    <!-- <span style="font-size: x-small;">Ppk &gt; 1.33, Pp &gt; 1.67</span> -->
+                                    <br />
+                                    <!-- <img src="../../assets/img/small-logos/emptyCircle.svg" width="16" height="16"> -->
+                                </div>
+                                <div class="boxColumnDetail">
+                                    <h6 class="mb-0 text-sm">Stable</h6>
+                                    <!-- <span style="font-size: x-small;">Ppk &gt; 1.33, Pp &gt; 1.67</span> -->
+                                    <br />
+                                    <!-- <img src="../../assets/img/small-logos/fullCircle.svg" width="16" height="16"> -->
+                                </div>
+                                <div class="boxRowDetail">
+                                    <h6 class="mb-0 text-sm">Not-Capable</h6>
+                                    <!-- <span style="font-size: x-small;">Cpk &gt; 1.33, Cp &gt; 1.67</span> -->
+                                    <br />
+                                    <!-- <img src="../../assets/img/small-logos/emptyCircle.svg" width="16" height="16"> -->
+                                </div>
+                                <div class="box bg-gradient-warning">
+                                    <!-- <span class="badge">Quadrant-II</span> -->
+                                    <h4 class="mb-0 text-white ctqSpan">CTQ = 18</h4>
+                                </div>
+                                <div class="box bg-gradient-danger">
+                                    <!-- <span class="badge" >Quadrant-I</span> -->
+                                    <h4 class="mb-0 text-white ctqSpan">CTQ = 16</h4>
+                                </div>
+
+                                <div class="boxRowDetail">
+                                    <h6 class="mb-0 text-sm">Capable</h6>
+                                    <!-- <span style="font-size: x-small;">Cpk &lt; 1.33, Cp &lt; 1.67</span> -->
+                                    <br />
+
+
+                                    <!-- <img src="../../assets/img/small-logos/fullCircle.svg" width="16" height="16"> -->
+                                    <br />
+                                </div>
+
+                                <div class="box bg-gradient-info">
+                                    <!-- <span class="badge">Quadrant-III</span> -->
+                                    <h4 class="mb-0 text-white ctqSpan">CTQ = 16</h4>
+                                </div>
+                                <div class="box bg-gradient-success">
+                                    <!-- <span class="badge" >Quadrant-IV</span> -->
+                                    <h4 class="mb-0 text-white ctqSpan">CTQ = 17</h4>
+                                </div>
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="nav-wrapper  position-relative end-0 ">
+                <ul class="nav nav-pills tata-nav-pills  nav-fill p-1 " role="tablist" style="background-color:transparent;">
+                    <li class="nav-item ">
+                        <a class="nav-link mb-0 px-0  active" data-bs-toggle="tab" href="#profile-tabs-simple" role="tab" aria-controls="profile" aria-selected="true">
+                            Quadrant-I
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mb-0 px-0 " data-bs-toggle="tab" href="#dashboard-tabs-simple" role="tab" aria-controls="dashboard" aria-selected="false">
+                            Quadrant-II
+
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mb-0 px-0  " data-bs-toggle="tab" href="#profile-tabs-simple" role="tab" aria-controls="profile" aria-selected="true">
+                            Quadrant-III
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mb-0 px-0 " data-bs-toggle="tab" href="#dashboard-tabs-simple" role="tab" aria-controls="dashboard" aria-selected="false">
+                            Quadrant-IV
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="row ">
+                <div class="col-lg-4 col-md-6 mt-3 mb-4">
+                    <div class="card-header p-0 position-relative mb-5 mx-3 z-index-2">
+                        <div class="bg-gradient-dark shadow-primary border-radius-lg py-2 ">
+                            <h6 class="text-white text-capitalize text-center ps-3">Area</h6>
+                        </div>
+                    </div>
+                    <a href="../AreaExplorer/index.html">
+                        <div class="card z-index-2 ">
+                            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
+                                <div class="bg-gradient-tata shadow-primary border-radius-lg py-3 pe-1">
+                                    <div class="chart">
+                                        <canvas id="chart-bars" class="chart-canvas" height="200"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="mb-0 ">Pareto Distribution of CTQ in {title}</h6>
+                                <p class="text-sm ">Plant Pune Performance</p>
+                                <hr class="dark horizontal">
+                                <div class="d-flex ">
+                                    <i class="material-icons text-sm my-auto me-1">schedule</i>
+                                    <p class="mb-0 text-sm"> assessment done 2 days ago </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 mt-3 mb-4">
+                    <div class="card-header p-0 position-relative mb-5 mx-3 z-index-2">
+                        <div class="bg-gradient-dark shadow-primary border-radius-lg py-2 ">
+                            <h6 class="text-white text-capitalize text-center ps-3">Model</h6>
+                        </div>
+                    </div>
+                    <a href="../ModalExplorer/index.html">
+                        <div class="card z-index-2 ">
+                            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
+                                <div class="bg-gradient-tata shadow-primary border-radius-lg py-3 pe-1">
+                                    <div class="chart">
+                                        <canvas id="chart-bars1" class="chart-canvas" height="200"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="mb-0 ">Pareto Distribution of CTQ in {title}</h6>
+                                <p class="text-sm ">Plant Pune Performance</p>
+                                <hr class="dark horizontal">
+                                <div class="d-flex ">
+                                    <i class="material-icons text-sm my-auto me-1">schedule</i>
+                                    <p class="mb-0 text-sm"> assessment done 2 days ago </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 mt-3 mb-4">
+                    <div class="card-header p-0 position-relative mb-5 mx-3 z-index-2 ">
+                        <div class="bg-gradient-dark shadow-primary border-radius-lg py-2">
+                            <h6 class="text-white text-capitalize text-center ps-3">Component</h6>
+                        </div>
+                    </div>
+                    <div class="card z-index-2 ">
+                        <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
+                            <div class="bg-gradient-tata shadow-primary border-radius-lg py-3 pe-1">
+                                <div class="chart">
+                                    <canvas id="chart-bars2" class="chart-canvas" height="200"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="mb-0 ">Pareto Distribution of CTQ in {title}</h6>
+                            <p class="text-sm ">Plant Pune Performance</p>
+                            <hr class="dark horizontal">
+                            <div class="d-flex ">
+                                <i class="material-icons text-sm my-auto me-1">schedule</i>
+                                <p class="mb-0 text-sm"> assessment done 2 days ago </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!--Demo Application Helper Files-->
+    <script src="../../assets/js/quickActionDemo.js"></script>
+    <!--   Core JS Files   -->
+    <script src="../../JS/jquery-1.9.1.min.js"></script>
+    <script src="../../JS/QdasFunctions.js"></script>
+    <script src="../../assets/js/core/popper.min.js"></script>
+    <script src="../../assets/js/core/bootstrap.min.js"></script>
+    <script src="../../assets/js/plugins/perfect-scrollbar.min.js"></script>
+    <script src="../../assets/js/plugins/smooth-scrollbar.min.js"></script>
+    <script src="../../assets/js/plugins/chartjs.min.js"></script>
+    <script>
+        var ctx = document.getElementById("chart-bars").getContext("2d");
+        var ctx1 = document.getElementById("chart-bars1").getContext("2d");
+        var ctx2 = document.getElementById("chart-bars2").getContext("2d");
+        new Chart(ctx, {
+            type: "bar",
+            data: {
+                labels: ["ENG", "GRB", "ASY"],
+                datasets: [{
+                    label: "CTQ Count",
+                    tension: 0.4,
+                    borderWidth: 0,
+                    borderRadius: 4,
+                    borderSkipped: false,
+                    backgroundColor: "rgba(255, 255, 255, .8)",
+                    data: [50, 20, 10, 22, 50, 10, 40],
+                    maxBarThickness: 6
+                },],
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false,
+                    }
+                },
+                interaction: {
+                    intersect: false,
+                    mode: 'index',
+                },
+                scales: {
+                    y: {
+                        grid: {
+                            drawBorder: false,
+                            display: true,
+                            drawOnChartArea: true,
+                            drawTicks: false,
+                            borderDash: [5, 5],
+                            color: 'rgba(255, 255, 255, .2)'
+                        },
+                        title: {
+                            display: true,
+                            text: 'CTQ-Count',
+                            color: "#fff", font: {
+
+                                size: 14,
+                                weight: 'bold',
+                                lineHeight: 1.2,
+                            },
+                            padding: { left: 0, right: 0, bottom: 0 }
+
+
+                        },
+                        ticks: {
+                            suggestedMin: 0,
+                            suggestedMax: 500,
+                            beginAtZero: true,
+                            padding: 10,
+                            font: {
+                                size: 14,
+                                weight: 300,
+                                family: "Roboto",
+                                style: 'normal',
+                                lineHeight: 2
+                            },
+                            color: "#fff"
+                        },
+                    },
+                    x: {
+                        grid: {
+                            drawBorder: false,
+                            display: true,
+                            drawOnChartArea: true,
+                            drawTicks: false,
+                            borderDash: [5, 5],
+                            color: 'rgba(255, 255, 255, .2)'
+                        },
+                        title: {
+                            display: true,
+                            text: 'Area',
+                            color: "#fff", font: {
+
+                                size: 14,
+                                weight: 'bold',
+                                lineHeight: 1.2,
+                            },
+                            padding: { left: 0, right: 0, bottom: 0 }
+
+
+                        },
+                        ticks: {
+                            display: true,
+                            color: '#f8f9fa',
+                            padding: 10,
+                            font: {
+                                size: 14,
+                                weight: 300,
+                                family: "Roboto",
+                                style: 'normal',
+                                lineHeight: 2
+                            },
+                        }
+                    },
+                },
+            },
+        });
+
+        new Chart(ctx1, {
+            type: "bar",
+            data: {
+                labels: ["2.2 LTR", "3.3 LTR", "4.4 LTR"],
+                datasets: [{
+                    label: "CTQ Count",
+                    tension: 0.4,
+                    borderWidth: 0,
+                    borderRadius: 4,
+                    borderSkipped: false,
+                    backgroundColor: "rgba(255, 255, 255, .8)",
+                    data: [50, 20, 10, 22, 50, 10, 40],
+                    maxBarThickness: 6
+                },],
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false,
+                    }
+                },
+                interaction: {
+                    intersect: false,
+                    mode: 'index',
+                },
+                scales: {
+                    y: {
+                        grid: {
+                            drawBorder: false,
+                            display: true,
+                            drawOnChartArea: true,
+                            drawTicks: false,
+                            borderDash: [5, 5],
+                            color: 'rgba(255, 255, 255, .2)'
+                        },
+                        title: {
+                            display: true,
+                            text: 'CTQ-Count',
+                            color: "#fff", font: {
+
+                                size: 14,
+                                weight: 'bold',
+                                lineHeight: 1.2,
+                            },
+                            padding: { left: 0, right: 0, bottom: 0 }
+
+
+                        },
+                        ticks: {
+                            suggestedMin: 0,
+                            suggestedMax: 500,
+                            beginAtZero: true,
+                            padding: 10,
+                            font: {
+                                size: 14,
+                                weight: 300,
+                                family: "Roboto",
+                                style: 'normal',
+                                lineHeight: 2
+                            },
+                            color: "#fff"
+                        },
+                    },
+                    x: {
+                        grid: {
+                            drawBorder: false,
+                            display: true,
+                            drawOnChartArea: true,
+                            drawTicks: false,
+                            borderDash: [5, 5],
+                            color: 'rgba(255, 255, 255, .2)'
+                        },
+                        title: {
+                            display: true,
+                            text: 'Model',
+                            color: "#fff", font: {
+
+                                size: 14,
+                                weight: 'bold',
+                                lineHeight: 1.2,
+                            },
+                            padding: { left: 0, right: 0, bottom: 0 }
+
+
+                        },
+                        ticks: {
+                            display: true,
+                            color: '#f8f9fa',
+                            padding: 10,
+                            font: {
+                                size: 14,
+                                weight: 300,
+                                family: "Roboto",
+                                style: 'normal',
+                                lineHeight: 2
+                            },
+                        }
+                    },
+                },
+            },
+        });
+
+
+        new Chart(ctx2, {
+            type: "bar",
+            data: {
+                labels: ["Head", "Block", "Gear"],
+
+                datasets: [{
+                    label: "CTQ Count",
+                    tension: 0.4,
+                    borderWidth: 0,
+                    borderRadius: 4,
+                    borderSkipped: false,
+                    backgroundColor: "rgba(255, 255, 255, .8)",
+                    data: [50, 20, 10, 22, 50, 10, 40],
+                    maxBarThickness: 6
+                },],
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false,
+                    }
+                },
+                interaction: {
+                    intersect: false,
+                    mode: 'index',
+                },
+                scales: {
+                    y: {
+                        grid: {
+                            drawBorder: false,
+                            display: true,
+                            drawOnChartArea: true,
+                            drawTicks: false,
+                            borderDash: [5, 5],
+                            color: 'rgba(255, 255, 255, .2)'
+                        },
+                        title: {
+                            display: true,
+                            text: 'CTQ-Count',
+                            color: "#fff", font: {
+
+                                size: 14,
+                                weight: 'bold',
+                                lineHeight: 1.2,
+                            },
+                            padding: { left: 0, right: 0, bottom: 0 }
+
+
+                        },
+                        ticks: {
+                            suggestedMin: 0,
+                            suggestedMax: 500,
+                            beginAtZero: true,
+                            padding: 10,
+                            font: {
+                                size: 14,
+                                weight: 300,
+                                family: "Roboto",
+                                style: 'normal',
+                                lineHeight: 2
+                            },
+                            color: "#fff"
+                        },
+                    },
+                    x: {
+                        grid: {
+                            drawBorder: false,
+                            display: true,
+                            drawOnChartArea: true,
+                            drawTicks: false,
+                            borderDash: [5, 5],
+                            color: 'rgba(255, 255, 255, .2)'
+                        },
+                        title: {
+                            display: true,
+                            text: 'Component',
+                            color: "#fff", font: {
+
+                                size: 14,
+                                weight: 'bold',
+                                lineHeight: 1.2,
+                            },
+                            padding: { left: 0, right: 0, bottom: 0 }
+
+
+                        },
+                        ticks: {
+                            display: true,
+                            color: '#f8f9fa',
+                            padding: 10,
+                            font: {
+                                size: 14,
+                                weight: 300,
+                                family: "Roboto",
+                                style: 'normal',
+                                lineHeight: 2
+                            },
+                        }
+                    },
+                },
+            },
+        });
+
+
+    </script>
+    <script>
+        sessionStorage.setItem("page", "2X2 Risk Matrix");
+        showSidebar();
+        GetUserDetails();
+        var win = navigator.platform.indexOf('Win') > -1;
+        if (win && document.querySelector('#sidenav-scrollbar')) {
+            var options = {
+                damping: '0.5'
+            }
+            Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+        }
+    </script>
+<!--    <script src="../../JS/QdasFunctions.js"></script>-->
+    <script src="../../JS/buttons.github.io_buttons.js"></script>
+
+    <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+    <script src="../../assets/js/material-dashboard.min.js?v=3.0.4"></script>
+</body>
+
+</html>

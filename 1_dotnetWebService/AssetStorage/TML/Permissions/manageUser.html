@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="../../assets/img/apple-icon.png"
+    />
+    <!-- <link rel="icon" type="image/png" href="../../assets/img/favicon.png"> -->
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+
+    <title>QDAS Analytics Dashboard</title>
+    <!--     Fonts and icons     -->
+    <!--<link href="../../../CSS/googleapis_family.css" rel="stylesheet" /> -->
+    <!-- Nucleo Icons -->
+    <link href="../../assets/css/nucleo-icons.css" rel="stylesheet" />
+    <link href="../../assets/css/nucleo-svg.css" rel="stylesheet" />
+
+    <!-- CSS Files -->
+    <link
+      id="pagestyle"
+      href="../../assets/css/material-dashboard.css?v=3.0.4"
+      rel="stylesheet"
+    />
+    <!-- additional custom CSS Files -->
+    <link
+      id="customstyle"
+      href="../../assets/css/other_addition.css"
+      rel="stylesheet"
+    />
+
+    <script src="../../JS/jquery-1.9.1.min.js"></script>
+
+    <!-- Datetime JQuery -->
+    <link href="../../JS/jquery-ui.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="./permission.css" />
+    <link href="../../JS/smoothness-jquery-ui.css" rel="stylesheet" />
+    <!-- <link href="../../JS/bootstrap.min.css" rel="stylesheet" /> -->
+
+    <script src="../../JS/jquery-ui.min.js"></script>
+
+    <link href="../../JS/bootstrap-multiselect_css.css" rel="stylesheet" />
+    <script src="../../JS/bootstrap-multiselect.js"></script>
+    <!-- Table datatable css -->
+    <link
+      href="../../assets/libs/datatables/dataTables.bootstrap4.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="../../assets/libs/datatables/buttons.bootstrap4.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="../../assets/libs/datatables/responsive.bootstrap4.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="../../assets/libs/datatables/select.bootstrap4.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style>
+      .page-item.active .page-link {
+        color: #fff;
+      }
+
+      div.dataTables_filter input {
+        border: 1px solid !important;
+      }
+    </style>
+    <style type="text/css">
+      .multiselect-container {
+        width: 100% !important;
+      }
+
+      .btn:not([class*="btn-outline-"]) {
+        border: 1px solid #838080 !important;
+      }
+    </style>
+  </head>
+
+  <body class="g-sidenav-show bg-gray-200" code="CONFIG_USER.VIEW_CONFIG_USER">
+    <div class="loader" id="AjaxLoader" style="display: none">
+      <div class="strip-holder">
+        <div class="strip-1"></div>
+        <div class="strip-2"></div>
+        <div class="strip-3"></div>
+      </div>
+    </div>
+    <aside
+      class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 bg-gradient-dark"
+      id="sideMenuBar"
+    ></aside>
+
+    <main
+      class="main-content position-relative max-height-vh-100 h-100 border-radius-lg"
+    >
+      <div id="shownav"></div>
+      <div class="container-fluid py-4">
+        <div class="col-sm-12" id="mainTable">
+          <div class="card mb-4 p-4">
+            <div class="d-flex justify-content-end">
+              <button
+                type="button"
+                class="btn bg-gradient-info"
+                data-bs-toggle="modal"
+                data-bs-target="#modal-form"
+              >
+                Add User
+              </button>
+            </div>
+
+            <div class="table">
+              <table
+                id="char-data-table"
+                class="table align-items-center mb-0"
+                style="width: 100%"
+              >
+                <thead style="z-index: 9; position: sticky; top: 0">
+                  <tr>
+                    <th class="text-uppercase text-xxs font-weight-bolder">
+                      Sr.No.
+                    </th>
+                    <th class="text-uppercase text-xxs font-weight-bolder">
+                      User Name
+                    </th>
+                    <th class="text-uppercase text-xxs font-weight-bolder">
+                      Full Name
+                    </th>
+                    <th class="text-uppercase text-xxs font-weight-bolder">
+                      Role Name
+                    </th>
+                    <th class="text-uppercase text-xxs font-weight-bolder">
+                      Plant
+                    </th>
+                    <th class="text-uppercase text-xxs font-weight-bolder">
+                      Area
+                    </th>
+                    <th class="text-uppercase text-center text-xxs font-weight-bolder">
+                      Status
+                    </th>
+                    <th class="text-center text-uppercase text-xxs font-weight-bolder">
+                      Edit
+                    </th>
+                  </tr>
+                </thead>
+                <colgroup>
+                  <col style="width: 10%" />
+                  <col style="width: 15%" />
+                  <col style="width: 20%" />
+                  <col style="width: 15%" />
+                  <col style="width: 15%" />
+                  <col style="width: 15%" />
+                  <col style="width: 5%" />
+                  <col style="width: 5%" />
+                </colgroup>
+                <tbody id="UserData"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div
+          class="modal fade"
+          id="hidden-form"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="modal-form"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h6 class="modal-title">Edit Details</h6>
+                <button
+                  type="button"
+                  class="btn-close text-dark"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                  onclick="$('#hidden-form').modal('hide')"
+                >
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div id="" class="px-5">
+                  <input type="text" id="Id" hidden />
+                  <div></div>
+                  <div class="row py-2">
+                    <div class="col-sm-4"><label for="role">Role</label></div>
+                    <div class="col-sm-6">
+                      <select id="roleDropDown"></select>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-sm-4"><label for="plant">Plant</label></div>
+                    <div class="col-sm-6">
+                      <select
+                        id="plantDropDown"
+                        multiple="multiple"
+                        style="background-color: #002060"
+                      ></select>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <label for="areaDropDown">Area</label>
+                    </div>
+                    <div class="col-sm-6">
+                      <select
+                        id="areaDropDown"
+                        multiple="multiple"
+                        style="background-color: #002060"
+                      ></select>
+                    </div>
+                  </div>
+                  <!-- <div class="saveData" style="display:flex;justify-content:center;align-content:center"> -->
+                  <!-- </div> -->
+                </div>
+              </div>
+              <div class="modal-footer justify-content-center">
+                <button
+                  type="button"
+                  class="px-4 rounded btn btn-sm"
+                  style="background: #344767; color: #fff"
+                  id="saveData"
+                >
+                  Save
+                </button>
+                <button
+                  type="button"
+                  class="mx-3 px-4 rounded btn btn-sm"
+                  style="background: #344767; color: #fff"
+                  id="cancelData"
+                >
+                  Cancel
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="col-md-4"> -->
+      <!-- <button type="button" class="btn btn-block btn-light mb-3" data-bs-toggle="modal" data-bs-target="#modal-form">Form</button> -->
+      <div
+        class="modal fade"
+        id="modal-form"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="modal-form"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal" role="document">
+          <div class="modal-content">
+            <div class="modal-header p-2">
+              <h5 class="">Add User</h5>
+              <button
+                type="button"
+                class="btn-close text-dark"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+                onclick="$('#modal-form').modal('hide');"
+              >
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="card card-plain">
+                <div class="card-header p-0 text-left">
+                  <p class="mb-0 p-0">Enter user Id to Add User</p>
+                </div>
+                <div class="card-body">
+                  <form class="form text-left">
+                    <div class="input-group input-group-outline mt-3">
+                      <label class="form-label">Admin Id </label>
+                      <input
+                        type="text"
+                        id="AdminId"
+                        class="form-control"
+                        onfocus="focused(this)"
+                        onfocusout="defocused(this)"
+                      />
+                    </div>
+                    <div class="input-group input-group-outline mt-3">
+                      <label class="form-label">Admin password</label>
+                      <input
+                        type="password"
+                        id="AdminPass"
+                        class="form-control"
+                        onfocus="focused(this)"
+                        onfocusout="defocused(this)"
+                      />
+                    </div>
+                    <div class="input-group input-group-outline mt-3">
+                      <label class="form-label">User Id </label>
+                      <input
+                        type="text"
+                        id="UserId"
+                        class="form-control"
+                        onfocus="focused(this)"
+                        onfocusout="defocused(this)"
+                      />
+                    </div>
+
+                    <div class="text-center">
+                      <button
+                        type="button"
+                        id="AddUser"
+                        class="btn btn-round bg-gradient-info btn-lg w-100 mt-4 mb-0"
+                      >
+                        Submit
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- </div> -->
+
+      <div
+        class="modal fade"
+        id="modal-notification"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="modal-notification"
+        aria-hidden="true"
+      >
+        <div
+          class="modal-dialog modal-danger modal-dialog-centered modal-"
+          role="document"
+        >
+          <div class="modal-content">
+            <div class="modal-header">
+              <h6 class="modal-title" id="modal-title-notification">
+                User's Info
+              </h6>
+              <button
+                type="button"
+                class="btn-close text-dark"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            <div class="modal-body" id="modal_body"></div>
+            <div class="modal-footer justify-content-center">
+              <button type="button" class="btn bg-gradient-info" id="userInfo">
+                Ok, Got it
+              </button>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!--Demo Application Helper Files-->
+    <script src="../../assets/js/quickActionDemo.js"></script>
+    <!--   Core JS Files   -->
+    <script src="../../assets/js/core/popper.min.js"></script>
+    <script src="../../assets/js/core/bootstrap.min.js"></script>
+    <script src="../../assets/js/plugins/perfect-scrollbar.min.js"></script>
+    <script src="../../assets/js/plugins/smooth-scrollbar.min.js"></script>
+    <script src="../../assets/js/plugins/chartjs.min.js"></script>
+    <script src="../../JS/buttons.github.io_buttons.js"></script>
+    <script src="../../assets/libs/datatables/jquery.dataTables.min.js"></script>
+    <script src="../../assets/libs/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="../../assets/libs/datatables/dataTables.responsive.min.js"></script>
+    <script src="../../assets/libs/datatables/responsive.bootstrap4.min.js"></script>
+    <script src="../../assets/libs/datatables/dataTables.buttons.min.js"></script>
+    <script src="../../assets/libs/datatables/buttons.bootstrap4.min.js"></script>
+    <script src="../../assets/libs/datatables/buttons.html5.min.js"></script>
+    <script src="../../assets/libs/datatables/buttons.print.min.js"></script>
+    <script src="../../assets/libs/datatables/dataTables.keyTable.min.js"></script>
+    <script src="../../assets/libs/datatables/dataTables.select.min.js"></script>
+    <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+    <script src="../../assets/js/material-dashboard.min.js?v=3.0.4"></script>
+    <script src="../../JS/popper.min.js"></script>
+    <script type="text/javascript" src="../../JS/bootstrap.min.js"></script>
+
+    <script src="../../JS/moment.min.js"></script>
+    <script src="../../JS/Api_Call.js"></script>
+    <script src="../../JS/QdasFunctions.js"></script>
+    <script src="./user.js"></script>
+  </body>
+</html>

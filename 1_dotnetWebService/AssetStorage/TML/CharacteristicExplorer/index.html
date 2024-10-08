@@ -1,0 +1,345 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="../../assets/img/favicon.png">
+    <title>
+        QDAS Analytics Dashboard
+    </title>
+    <!--     Fonts and icons     -->
+    <script src="../../JS/kitfontawe.js"></script>
+    <link href="../../../CSS/googleapis_family.css" rel="stylesheet" />
+    <!-- Nucleo Icons -->
+    <link href="../../assets/css/nucleo-icons.css" rel="stylesheet" />
+    <link href="../../assets/css/nucleo-svg.css" rel="stylesheet" />
+
+    <!-- CSS Files -->
+    <link id="pagestyle" href="../../assets/css/material-dashboard.css?v=3.0.4" rel="stylesheet" />
+    <!-- additional custom CSS Files -->
+    <link id="customstyle" href="../../assets/css/other_addition.css" rel="stylesheet" />
+    <script src="../../assets/js/jquery-1.9.1.min.js"></script>
+
+    <!-- Datetime JQuery -->
+    <link href="../../JS/jquery-ui.css" rel="stylesheet" />
+    <link href="../../JS/smoothness-jquery-ui.css" rel="stylesheet" />
+    <script src="../../JS/jquery-ui.min.js"></script>
+
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <!-- Table datatable css -->
+    <link href="../../assets/libs/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../assets/libs/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../assets/libs/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../assets/libs/datatables/select.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <style>
+        .page-item.active .page-link {
+            color: #fff;
+        }
+
+        div.dataTables_filter input {
+            border: 1px solid !important;
+        }
+
+        .form-check-input:checked {
+            background-color: #0CBABA !important;
+            /* background-color: #1A73E8 !important; */
+        }
+    </style>
+
+
+</head>
+<body class="g-sidenav-show  bg-gray-200" code="CHAR_EXPLORER.VIEW_CHAR_EXPLORER">
+
+    <!-- Ajax Loader -->
+    <div class="loader" id="AjaxLoader" style="display:none;">
+        <div class="strip-holder">
+            <div class="strip-1"></div>
+            <div class="strip-2"></div>
+            <div class="strip-3"></div>
+        </div>
+    </div>
+
+    <ref>
+        <div class="modalBackground" id="modalBackground"></div>
+    </ref>
+    <ref id="qdasChart1">
+        <div class="modalCustom" id="modal">
+            <span class="close" id="close" onclick="closeModal();">Close &times;</span>
+            <div class="modalHeading">
+                Characteristic Chart
+            </div>
+            <div class="modalSection">
+                <img src="../../assets/img/QdasChart.png">
+            </div>
+        </div>
+    </ref>
+    <!-- SiderBar -->
+    <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark" id="sidenav-main">
+    </aside>
+    <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+        <!-- Navbar -->
+        <div id="displayNAV"></div>
+        <!-- End Navbar -->
+        <div class="container-fluid py-2">
+            <div class="fixed-plugin  ps" onclick="history.back()">
+                <a class="fixed-plugin-button text-dark position-fixed affix-top p-2 ">
+                    <img style="border-radius: 50%;" src="../../img/icons/arrow_back.svg" alt="">
+
+                </a>
+
+
+            </div>
+            <div class="card my-4">
+
+                <div class="card-body py-2">
+                    <div class="row align-items-center">
+                        <div class="col-sm-7">
+                            <div class="row align-items-center">
+                                <div class="col-sm-4">
+
+                                    <span class="">Plant </span>
+                                    <select id="plant_id" class="form-select mt-1 p-2" aria-label="Default select example">
+                                    </select>
+
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <span class="">Area </span>
+                                    <select id="Area_id" class="form-select mt-1 p-2" aria-label="Default select example">
+                                    </select>
+
+                                </div>
+                                <div class="col-sm-4">
+
+                                    <span>Component  </span>
+                                    <select id="component_id" class="form-select mt-1 p-2" aria-label="Default select example">
+                                    </select>
+
+                                </div>
+
+                                <div class="col-sm-4">
+
+                                    <span>Model </span>
+                                    <select id="model_id" class="form-select mt-1 p-2" aria-label="Default select example">
+                                    </select>
+
+                                </div>
+                                <div class="col-sm-4 ">
+
+                                    <span>Operation </span>
+                                    <select id="oper_id" class="form-select mt-1 p-2" aria-label="Default select example">
+                                    </select>
+
+                                </div>
+                                <div class="col-sm-4">
+
+                                    <span class="">Quadrant </span>
+
+                                    <select id="Quad_id" class="form-select mt-1 p-2" aria-label="Default select example">
+                                    </select>
+
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                        <div class="col-sm-2 d-flex align-items-center justify-content-center">
+                            <button type="button" id="BtnRefresh" class="btn btn-info mt-4 " onclick="">Refresh</button>
+
+                        </div>
+                        <div class="col-sm-3 text-center" id="charRiskmatrix">
+
+
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="card my-4">
+
+                <div class="card-body py-2">
+                    <div class="row align-items-center">
+                        <div class="col-sm-12">
+                            <div id="SetClassStatus" class=" d-flex mb-2 align-items-center justify-content-around">
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+
+
+                    <div class="card my-4">
+
+
+                        <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                            <div class="bg-plant-title shadow-primary border-radius-lg pt-4 pb-3" id="plant_name">
+                                <h6 class="text-white text-capitalize ps-3">Characteristics Overview of <span id="PlantTitle"></span></h6>
+                            </div>
+                        </div>
+                        <div class="card-body ">
+
+                            <table id="char-data-table" class="table align-items-center mb-0" style="width: 100%;">
+
+                                <colgroup>
+
+
+                                    <col width="12%">
+                                    <col width="8%">
+                                    <col width=" 5%">
+                                    <col width=" 10%">
+                                    <col width=" 10%">
+                                    <col width=" 10%">
+                                    <col width=" 10%">
+                                    <col width=" 10%">
+                                    <col width=" 5%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 px-1">Product & Charactrerisitic Description</th>
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 px-1">Operation</th>
+                                        <th class=" text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 px-1">class</th>
+
+                                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 px-1">Average</th>
+                                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 px-1">Range</th>
+
+                                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 px-1">Std Dev</th>
+                                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 px-1">Pot index</th>
+                                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 px-1">Crit index  </th>
+                                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 px-1">Stat</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                            <!-- </div> -->
+                            <div id="myModal" class="modal fade bs-example-modal-lg" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="myModalLabel">Q-DAS Charts</h5>
+                                            <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">  <span aria-hidden="true">&times;</span></button>
+                                        </div>
+                                        <div class="modal-body">
+
+                                            <div class="row radio_toolbar border-bottom">
+                                                <div class="col-3 custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" onchange="Show_CharChart()" id="value_chart" name="customRadioInline1" class="custom-control-input" checked>
+                                                    <label class="custom-control-label" for="value_chart">Value Chart</label>
+                                                </div>
+                                                <div class=" col-3 custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" onchange="Show_CharChart()" id="qcc_chart" name="customRadioInline1" class="custom-control-input">
+                                                    <label class="custom-control-label" for="qcc_chart">Qcc Chart</label>
+                                                </div>
+                                                <div class="col-3 custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" onchange="Show_CharChart()" id="histo_chart" name="customRadioInline1" class="custom-control-input">
+                                                    <label class="custom-control-label" for="histo_chart">Histogram Chart</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 d-flex flex-wrap" id="display"></div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary waves-effect" data-bs-dismiss="modal">Close</button>
+                                            </div>
+                                        </div><!-- /.modal-content -->
+                                    </div><!-- /.modal-dialog -->
+                                </div><!-- /.modal -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <footer class="footer py-4  ">
+                <div class="container-fluid">
+                    <div class="row align-items-center justify-content-lg-between">
+                        <div class="col-lg-6 mb-lg-0 mb-4">
+                            <div class="copyright text-center text-sm text-muted text-lg-start">
+                                ©
+                                <script>
+                                    document.write(new Date().getFullYear())
+                                </script>,
+                                made with <i class="fa fa-heart" aria-hidden="true"></i>
+                                <a href="/" class="font-weight-bold text-black" target="_blank">For Tata Motors</a>
+                                for a better Inhouse Quality.
+                            </div>
+                        </div>
+                        <ref>
+                            <div class="col-lg-6">
+                                <ul class="nav nav-footer justify-content-center justify-content-lg-end">
+                                    <li class="nav-item">
+                                        <a href="https://www.creative-tim.com" class="nav-link text-muted" target="_blank">Creative Tim</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="https://www.creative-tim.com/presentation" class="nav-link text-muted" target="_blank">About Us</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="https://www.creative-tim.com/blog" class="nav-link text-muted" target="_blank">Blog</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="https://www.creative-tim.com/license" class="nav-link pe-0 text-muted" target="_blank">License</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </ref>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+    </main>
+
+
+    <!--Demo Application Helper Files-->
+    <script src="../../assets/js/quickActionDemo.js"></script>
+
+    <!--   Core JS Files   -->
+    <script src="../../assets/js/core/popper.min.js"></script>
+    <script src="../../assets/js/core/bootstrap.min.js"></script>
+    <script src="../../assets/js/plugins/perfect-scrollbar.min.js"></script>
+    <script src="../../assets/js/plugins/smooth-scrollbar.min.js"></script>
+    <script src="../../assets/libs/datatables/jquery.dataTables.min.js"></script>
+    <script src="../../assets/libs/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="../../assets/libs/datatables/dataTables.responsive.min.js"></script>
+    <script src="../../assets/libs/datatables/responsive.bootstrap4.min.js"></script>
+    <script src="../../assets/libs/datatables/dataTables.buttons.min.js"></script>
+    <script src="../../assets/libs/datatables/buttons.bootstrap4.min.js"></script>
+    <script src="../../assets/libs/datatables/buttons.html5.min.js"></script>
+    <script src="../../assets/libs/datatables/buttons.print.min.js"></script>
+    <script src="../../assets/libs/datatables/dataTables.keyTable.min.js"></script>
+    <script src="../../assets/libs/datatables/dataTables.select.min.js"></script>
+    <script src="../../JS/Api_Call.js"></script>
+    <script src="../../JS/QdasFunctions.js"></script>
+    <script src="./characteristic.js"></script>
+    <script src="../../JS/moment.min.js"></script>
+
+    <script>
+
+
+        var win = navigator.platform.indexOf('Win') > -1;
+        if (win && document.querySelector('#sidenav-scrollbar')) {
+            var options = {
+                damping: '0.5'
+            }
+            Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+        }
+    </script>
+
+    <!-- Github buttons -->
+    <script src="../../CSS/github_buttons.js"></script>
+
+    <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+    <script src="../../assets/js/material-dashboard.min.js?v=3.0.4"></script>
+</body>
+
+</html>

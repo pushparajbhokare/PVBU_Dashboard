@@ -1,0 +1,245 @@
+ref{
+    display: none;
+}
+
+.riskMatrix{
+    display: grid;
+    grid-template-rows: 1fr 2fr 2fr;
+    grid-template-columns: 1fr 2fr 2fr;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+.riskMatrix_tata{
+    /* display: grid;
+    grid-template-rows: 1fr 2fr 2fr;
+    grid-template-columns: 1fr 2fr 2fr;
+    row-gap: 10px;
+    column-gap: 10px; */
+    display: grid;
+    grid-template-rows: 1fr 2fr 2fr;
+    grid-template-columns:1fr 2fr 2fr;
+    row-gap: 10px;
+    column-gap: 10px;
+    /* margin: auto; */
+}
+.riskMatrix_char{
+    display: grid;
+    grid-template-rows: 2fr 2fr;
+    grid-template-columns: 2fr 2fr;
+    row-gap: 5px;
+    column-gap: 5px;
+}
+.overall_summary{
+    position: sticky;
+    top: 2rem;
+    right: 0;
+    z-index: 2;
+    height: 150vh;
+
+}
+.boxRowDetail{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.box{
+    border: 1px solid #555 ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #AAA;
+    border-radius:10px;
+cursor: pointer;
+}
+.ctqSpan{
+    text-decoration: underline;
+}
+.datePicker {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+.datePickerInput{
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 3px 5px;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+    width: 190px; 
+    background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ; 
+    font: 18px/1.4 Geneva, 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif; 
+}
+.datePickerInput::-webkit-inner-spin-button {
+    display: none;
+  }
+.datePickerInput::-webkit-calendar-picker-indicator {
+    opacity: 0;
+}
+
+.dataTable-bottom::after, .dataTable-top::after {
+    clear: both;
+    content: " ";
+    display: table;
+    float: left;
+    padding: 1.5rem;
+    padding-top: 1.5rem;
+    padding-top: 0;
+}
+
+.dataTable-info {
+    padding-top: 20px;
+    margin: 7px 0;
+    font-size: .875rem;
+}
+
+.dataTable-pagination{
+    float: right;
+}
+.dataTable-pagination ul {
+    margin: 0;
+    padding-left: 0;
+}
+
+.dataTable-pagination li {
+    list-style: none;
+    float: left;
+}
+.dataTable-pagination-list li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #7b809a;
+    padding: 0;
+    margin: 0 3px;
+      margin-left: 3px;
+    border: 1px solid #dee2e6;
+    border-radius: 50% !important;
+    width: 36px;
+    height: 36px;
+    font-size: .875rem;
+    margin-left: 0;
+  }
+
+.dataTable-pagination-list .active a {
+    background: transparent;
+      background-image: none;
+    background-image: linear-gradient(195deg,#ec407a,#d81b60);
+    box-shadow: 0 3px 5px -1px rgba(0,0,0,.09),0 2px 3px -1px rgba(0,0,0,.07);
+    color: #fff;
+    border: none;
+    border-radius: 50% !important;
+  }
+
+.modalBackground{
+    /*display:none;*/ 
+    display:block;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    z-index:10000;
+    padding-top:100px;
+    left:0;
+    top:0;
+    height: 100vh;
+    width: 100vw;
+    overflow:auto;
+    background-color: rgba(0,0,0,0.8);
+}
+.modalCustom {
+    display: flex;
+    flex-direction: column;
+    background-color: #fefefe;
+    padding:20px;
+    border: 4px solid #888;
+    width:80%;
+    height: 80%;
+    row-gap: 3vh;
+
+}
+.smallModal{
+    width:40%;
+    height:40%;
+}
+.modalHeading{
+    align-self: center;
+    font-weight: bold;
+    font-size: 2vh;
+}
+.modalSection {
+    display: flex;
+    flex-direction: column;
+}
+
+.big_input_box {
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+
+}
+
+.big_input_box textarea{
+    display:flex;
+    width: 60%;
+    height:80%;
+}
+
+.modalButton{
+    width : 50%;
+    height: 5vh;
+}
+
+/* The Close Button */
+.close {
+    display: flex;
+    color: blue;
+    font-size: 1vw;
+    font-weight: bold;
+    border: 2px groove green;
+    position:relative;
+    top:0%;
+    left:90%;
+    max-width:calc(3.5vw);
+  }
+  
+.close:hover,
+.close:focus {
+color: #000;
+text-decoration: none;
+cursor: pointer;
+}
+/* .chart{
+ background-image: url(../../img/bgimg/lead_measures_header_bg.png); 
+} */
+.bg-tata-title{
+
+    /* background-image: linear-gradient(195deg, #42424a 0%, #191919 100%); */
+ 
+
+        background-image: url(../../img/bgimg/lead_measures_header_bg.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+
+}
+.bg-plant-title{
+    /* background-image: url(../../img/bgimg/lead_measures_header_bg.png); */
+
+}
+.bg-plant-title::before{
+    content:"";
+    background-image: url(../../img/bgimg/lead_measures_header_bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity:0.8;
+    position:absolute;
+    border-radius: 10px;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:-3;
+  }

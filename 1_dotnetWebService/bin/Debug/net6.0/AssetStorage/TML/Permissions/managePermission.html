@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="../../assets/img/favicon.png">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link href="../../JS/bootstrap-multiselect_css.css" rel="stylesheet" />
+    <script src="../../JS/bootstrap-multiselect.js"></script>
+
+    <title>
+        QDAS Analytics Dashboard
+    </title>
+    <!--     Fonts and icons     -->
+    <!--<link href="../../../CSS/googleapis_family.css" rel="stylesheet" /> -->
+    <!-- Nucleo Icons -->
+    <link href="../../assets/css/nucleo-icons.css" rel="stylesheet" />
+    <link href="../../assets/css/nucleo-svg.css" rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <script src="../../JS/kitfontawe.js"></script>
+    <!-- <script src="../../JS/kitfontawe.js"></script>
+    <link href="../../../CSS/fonts_googleapis.css" rel="stylesheet" /> -->
+    <!-- CSS Files -->
+    <link id="pagestyle" href="../../assets/css/material-dashboard.css?v=3.0.4" rel="stylesheet" />
+    <!-- additional custom CSS Files -->
+    <link id="customstyle" href="../../assets/css/other_addition.css" rel="stylesheet" />
+
+    <script src="../../JS/jquery-1.9.1.min.js"></script>
+    <!-- Datetime JQuery -->
+    <link href="../../JS/jquery-ui.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="./permission.css" />
+    <link href="../../JS/smoothness-jquery-ui.css" rel="stylesheet" />
+    <script src="../../JS/jquery-ui.min.js"></script>
+    <link href="../../JS/bootstrap-multiselect_css.css" rel="stylesheet" />
+    <script src="../../JS/bootstrap-multiselect.js"></script>
+
+    <!-- Table datatable css -->
+    <link href="../../assets/libs/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../assets/libs/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../assets/libs/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../assets/libs/datatables/select.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <style>
+        .page-item.active .page-link {
+            color: #fff;
+        }
+
+        div.dataTables_filter input {
+            border: 1px solid !important;
+        }
+    </style>
+</head>
+
+<body class="g-sidenav-show  bg-gray-200" code="CONFIG_PERMISSION.VIEW_CONFIG_PERMISSION">
+    <div class="loader" id="AjaxLoader" style="display:none;">
+        <div class="strip-holder">
+            <div class="strip-1"></div>
+            <div class="strip-2"></div>
+            <div class="strip-3"></div>
+        </div>
+    </div>
+    <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark" id="sideMenuBar">
+    </aside>
+
+    <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg pb-4">
+        <div id="shownav"></div>
+        <div class="col-lg-6 " id="mainTable">
+            <div class="row header">
+                <h2>Detail</h2>
+            </div>
+            <div class="row border-bottom mb-2">
+                <div>General Info</div>
+            </div>
+            <div class="row mb-4">
+                <div class="col ">
+                    <label>Name</label>
+                    <input id="role_name" class="form-control px-4" style="background:#fff !important;" />
+                </div>
+                <div class="col ">
+                    <label>Code</label>
+                    <input id="role_code" class="form-control px-4" style="background:#fff !important;" />
+                </div>
+            </div>
+            <div class="row border-bottom mb-2">
+                <div>Permissions</div>
+            </div>
+            <div class="card mb-4">
+                <div class="table-responsive">
+
+                    <table class="table align-items-center text-center mb-0">
+                        <thead>
+                            <tr>
+                                <th class="text-uppercase  text-xxs font-weight-bolder ">
+                                    Page
+                                </th>
+                                <th class="text-uppercase  text-xxs font-weight-bolder ">
+                                    Permission
+                                </th>
+                                <th class="text-center text-uppercase  text-xxs font-weight-bolder ">
+                                    Access
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="managePermissionsTable">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="">
+            <!--<div class="saveData">
+                <button type="button" class="btn btn-sm " id="saveBtn" style="background: #344767; color:#fff; float:right; margin-right:20px;" >Save</button>
+            </div>-->
+
+        </div>
+
+
+
+    </main>
+    <script src="../../assets/libs/datatables/jquery.dataTables.min.js"></script>
+    <script src="../../assets/libs/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="../../assets/libs/datatables/dataTables.responsive.min.js"></script>
+    <script src="../../assets/libs/datatables/responsive.bootstrap4.min.js"></script>
+    <script src="../../assets/libs/datatables/dataTables.buttons.min.js"></script>
+    <script src="../../assets/libs/datatables/buttons.bootstrap4.min.js"></script>
+    <script src="../../assets/libs/datatables/buttons.html5.min.js"></script>
+    <script src="../../assets/libs/datatables/buttons.print.min.js"></script>
+    <script src="../../assets/libs/datatables/dataTables.keyTable.min.js"></script>
+    <script src="../../assets/libs/datatables/dataTables.select.min.js"></script>
+
+    <!--Demo Application Helper Files-->
+    <script src="../../assets/js/quickActionDemo.js"></script>
+    <!--   Core JS Files   -->
+    <script src="../../assets/js/core/popper.min.js"></script>
+    <script src="../../assets/js/core/bootstrap.min.js"></script>
+    <script src="../../assets/js/plugins/perfect-scrollbar.min.js"></script>
+    <script src="../../assets/js/plugins/smooth-scrollbar.min.js"></script>
+    <script src="../../assets/js/plugins/chartjs.min.js"></script>
+    <script src="../../JS/buttons.github.io_buttons.js"></script>
+
+    <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+    <script src="../../assets/js/material-dashboard.min.js?v=3.0.4"></script>
+    <script src="../../JS/popper.min.js"></script>
+    <script src="../../JS/moment.min.js"></script>
+    <script src="../../JS/Api_Call.js"></script>
+    <script src="../../JS/QdasFunctions.js"></script>
+    <script src="./user.js"></script>
+    <script src="./managePermissions.js"></script>
+
+    <script>
+        addHead("Permission List");
+        GetUserDetails();
+    </script>
+</body>
+
+</html>

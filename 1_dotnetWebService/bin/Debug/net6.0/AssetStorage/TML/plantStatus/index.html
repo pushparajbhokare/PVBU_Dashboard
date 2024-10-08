@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="apple-touch-icon"
+          sizes="76x76"
+          href="../../assets/img/apple-icon.png" />
+    <link rel="icon" type="image/png" href="../../assets/img/favicon.png" />
+    <title>QDAS Analytics Dashboard</title>
+    <!--     Fonts and icons     -->
+    <link href="../../../CSS/googleapis_family.css" rel="stylesheet" />
+    <!-- Nucleo Icons -->
+    <link href="../../assets/css/nucleo-icons.css" rel="stylesheet" />
+    <link href="../../assets/css/nucleo-svg.css" rel="stylesheet" />
+   
+    <script src="../../assets/js/jquery-1.9.1.min.js"></script>
+    <!-- Datetime JQuery -->
+    <link href="../../JS/jquery-ui.css" rel="stylesheet" />
+    <link href="../../JS/smoothness-jquery-ui.css" rel="stylesheet" />
+    <script src="../../JS/jquery-ui.min.js"></script>
+
+    <!-- CSS Files -->
+    <link id="pagestyle"
+          href="../../assets/css/material-dashboard.css?v=3.0.4"
+          rel="stylesheet" />
+    <!-- additional custom CSS Files -->
+    <link id="customstyle"
+          href="../../assets/css/other_addition.css"
+          rel="stylesheet" />
+    <link id="customstyle" href="../../assets/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../assets/css/tata.css" />
+    <style>
+        .form-check-input:checked {
+            background-color: #0cbaba !important;
+            /* background-color: #1A73E8 !important; */
+        }
+
+        .table th {
+            white-space: nowrap;
+        }
+    </style>
+</head>
+
+<body class="g-sidenav-show bg-gray-200" code="PLANT_STATUS.VIEW_PLANT_STATUS">
+    <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 bg-gradient-dark"
+       id="sidenav-main">
+      
+    </aside>
+    <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg">
+        <!-- Navbar -->
+       
+          <div id="displayNAV"></div>
+        
+        <!-- End Navbar -->
+        <div class="container-fluid">
+           
+
+            <div class="shadow-primary d-flex justify-content-around border-radius-lg pt-4 pb-3"
+                 style="background-color: #fff">
+                <div class="d-flex justify-content-around" id="Plant_name">
+                </div>
+                <div class="d-flex justify-content-around">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input"
+                               type="checkbox"
+                               id="CheckedCTQ-C"
+                               checked="" />
+                        <label class="form-check-label text-black text-capitalize font-weight-bold"
+                               for="CheckedCTQ-C">
+                            CTQ-C
+                        </label>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input"
+                               type="checkbox"
+                               id="CheckedCTQ-M"
+                               checked />
+
+                        <label class="form-check-label text-black text-capitalize font-weight-bold"
+                               for="CheckedCTQ-M">CTQ-M</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" style="margin: 0; padding: 0" id="Quad_container">
+
+            </div>
+        </div>
+        <hr class="dark horizontal" style="border: 1px solid #000" hidden />
+        <div class="card p-0" style="margin-bottom: 10px !important" hidden>
+            <div class="card-body py-0">
+                <div class="row align-items-center">
+                    <div class="row align-items-center">
+                        <div class="col-sm-3">
+                            <span class="">Area </span>
+                            <select id="Area_id"
+                                    class="form-select mt-1 p-2"
+                                    aria-label="Default select example">
+                                <option value="">All</option>
+
+                                <option value="">ENG</option>
+                                <option value="">GRB</option>
+                                <option value="">ASY</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-3">
+                            <span>Component </span>
+                            <select id="component_id"
+                                    class="form-select mt-1 p-2"
+                                    aria-label="Default select example">
+                                <option value="">All</option>
+                                <option value="">Head</option>
+                                <option value="">Block</option>
+                                <option value="">Gear</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-3">
+                            <span>Model </span>
+                            <select id="model_id"
+                                    class="form-select mt-1 p-2"
+                                    aria-label="Default select example">
+                                <option value="">All</option>
+                                <option value="">2.2 LTR</option>
+                                <option value="">3.3 LTR</option>
+                                <option value="">4.4 LTR</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-3">
+                            <button type="button"
+                                    class="btn btn-info mt-5 ml-4"
+                                    onclick="processRefresh()">
+                                Refresh
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      
+    </main>
+    <!-- <script src="../../assets/js/jquery-1.9.1.min.js"></script> -->
+    <script src="../../JS/moment.min.js"></script>
+
+    <!--Demo Application Helper Files-->
+    <script src="../../assets/js/quickActionDemo.js"></script>
+    <!--   Core JS Files   -->
+    <script src="../../assets/js/core/popper.min.js"></script>
+    <script src="../../assets/js/core/bootstrap.min.js"></script>
+    <script src="../../assets/js/plugins/perfect-scrollbar.min.js"></script>
+    <script src="../../assets/js/plugins/smooth-scrollbar.min.js"></script>
+    <script src="../../assets/js/plugins/chartjs.min.js"></script>
+    <script src="../../JS/Api_Call.js"></script>
+    <script src="../../JS/QdasFunctions.js"></script>   
+    <script src="./plantstatus.js"></script>
+    <script>
+
+        var win = navigator.platform.indexOf("Win") > -1;
+        if (win && document.querySelector("#sidenav-scrollbar")) {
+            var options = {
+                damping: "0.5",
+            };
+            Scrollbar.init(document.querySelector("#sidenav-scrollbar"), options);
+        }
+
+    </script>
+    <!-- Github buttons -->
+    <script src="../../JS/buttons.github.io_buttons.js"></script>
+    <!--<script async defer src="https://buttons.github.io/buttons.js"></script>-->
+    <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+    <script src="../../assets/js/material-dashboard.min.js?v=3.0.4"></script>
+</body>
+</html>

@@ -1,0 +1,1055 @@
+<!--
+=========================================================
+* Material Dashboard 2 - v3.0.4
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/material-dashboard
+* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+* Licensed under MIT (https://www.creative-tim.com/license)
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="../../assets/img/favicon.png">
+    <title>
+        QDAS Analytics Dashboard
+    </title>
+    <!--     Fonts and icons     -->
+    <link href="../../../CSS/googleapis_family.css" rel="stylesheet" />
+    <!-- Nucleo Icons -->
+    <link href="../../assets/css/nucleo-icons.css" rel="stylesheet" />
+    <link href="../../assets/css/nucleo-svg.css" rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <!-- <script src="../../JS/kitfontawe.js"></script>
+    <link href="../../../CSS/fonts_googleapis.css" rel="stylesheet" /> -->
+    <!-- CSS Files -->
+    <link id="pagestyle" href="../../assets/css/material-dashboard.css?v=3.0.4" rel="stylesheet" />
+    <!-- additional custom CSS Files -->
+    <link id="customstyle" href="../../assets/css/other_addition.css" rel="stylesheet" />
+</head>
+
+<body class="g-sidenav-show  bg-gray-200">
+    <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark" id="sidenav-main">
+        <div class="sidenav-header">
+            <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
+            <a class="navbar-brand m-0" href="../CVBU/index.html" target="_blank">
+                <img src="../../assets/img/logo-ct.png" class="navbar-brand-img h-100" alt="main_logo">
+                <span class="ms-1 font-weight-bold text-white">Q-DAS Quality System</span>
+            </a>
+        </div>
+        <hr class="horizontal light mt-0 mb-2">
+        <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link text-white " href="../CVBU/index.html">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <img src="../../img/icons/dashboard.svg" width="30" alt="">
+                        </div>
+                        <span class="nav-link-text ms-1">CVBU-Overview</span>
+
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="../2x2matrix/index.html">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <img src="../../img/icons/table_view.svg" width="30" alt="">
+
+                        </div>
+                        <span class="nav-link-text ms-1">2X2 Risk Matrix</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link text-white  " href="../plantStatus/index.html">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <span class="material-icons opacity-10">
+                                inventory
+                            </span>
+                        </div>
+                        <span class="nav-link-text ms-1">Plant Status</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white " href="../AreaExplorer/index.html">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <img src="../../img/icons/area_chart.svg" width="30" alt="">
+                        </div>
+                        <span class="nav-link-text ms-1">Area Explorer</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white " href="../ModalExplorer/index.html">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <img src="../../img/icons/explore.svg" width="30" alt="">
+                        </div>
+                        <span class="nav-link-text ms-1">Model Explorer</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white " href="../CharacteristicExplorer/index.html">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <span class="material-icons opacity-10">
+                                data_exploration
+                            </span>
+                        </div>
+                        <span class="nav-link-text ms-1">Characteristic Explorer</span>
+                    </a>
+                </li>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white active bg-gradient-primary  " href="../dashboard2/index.html">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <img src="../../img/icons/dashboard.svg" width="30" alt="">
+                        </div>
+                        <span class="nav-link-text ms-1">Dashboard_1</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="sidenav-footer position-absolute w-100 bottom-0 ">
+            <div class="mx-3">
+                <img src="../../assets/img/logos/tata_motors_logo.png" style="height:auto; width:100%" />
+                <ref>
+                    <a class="btn bg-gradient-primary mt-4 w-100" href="https://www.creative-tim.com/product/material-dashboard-pro?ref=sidebarfree" type="button">Upgrade to pro</a>
+                </ref>
+            </div>
+        </div>
+    </aside>
+    <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+        <!-- Navbar -->
+        <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" data-scroll="true">
+            <div class="container-fluid py-1 px-3">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+                        <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a></li>
+                        <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Dashboard</li>
+                    </ol>
+                    <h6 class="font-weight-bolder mb-0">Management Dashboard</h6>
+                </nav>
+                <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
+                    <div class="ms-md-auto pe-md-3 d-flex align-items-center">
+                        <!-- <div class="input-group input-group-outline">
+                          <label class="form-label">Type here...</label>
+                          <input type="text" class="form-control">
+                        </div> -->
+                    </div>
+                    <ul class="navbar-nav  justify-content-end">
+                        <ref>
+                            <li class="nav-item d-flex align-items-center">
+                                <a class="btn btn-outline-primary btn-sm mb-0 me-3" target="_blank" href="https://www.creative-tim.com/builder/material?ref=navbar-dashboard">Online Builder</a>
+                            </li>
+                        </ref>
+                        <li class="nav-item d-flex align-items-center">
+                            <a href="#" class="nav-link text-body font-weight-bold px-0">
+                                <i class="fa fa-user me-sm-1"></i>
+                                <span class="d-sm-inline d-none">Manager: Rohit</span>
+                            </a>
+                        </li>
+                        <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
+                            <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
+                                <div class="sidenav-toggler-inner">
+                                    <i class="sidenav-toggler-line"></i>
+                                    <i class="sidenav-toggler-line"></i>
+                                    <i class="sidenav-toggler-line"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item px-3 d-flex align-items-center">
+                            <a href="javascript:;" class="nav-link text-body p-0">
+                                <i class="fa fa-cog fixed-plugin-button-nav cursor-pointer"></i>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- End Navbar -->
+        <div class="container-fluid py-4">
+            <div class="row ">
+                <div class="col-lg-8 col-md-8 mt-4 mb-4">
+                    <div class="card  ">
+                        <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                            <a href="../plantStatus/index.html">
+                                <div class="bg-gradient-secondary shadow-primary border-radius-lg pt-4 pb-3 shadow-primary border-radius-lg pt-4 pb-3">
+                                    <h6 class="text-white text-capitalize ps-3">Pune</h6>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="row mt-4">
+                            <div class="col-lg-6  px-4">
+                                <div class="riskMatrix_tata  text-center">
+                                    <div class="box bg-gradient-danger py-4">
+                                        <span class="badge">Quadrant-I</span>
+                                        <h4 class="mb-0 text-white ctqSpan">CTQ = 4</h4>
+                                    </div>
+                                    <div class="box bg-gradient-warning py-4">
+                                        <span class="badge">Quadrant-II</span>
+                                        <h4 class="mb-0 text-white ctqSpan">CTQ = 4</h4>
+                                    </div>
+                                    <div class="box bg-gradient-info py-4">
+                                        <span class="badge">Quadrant-III</span>
+                                        <h4 class="mb-0 text-white ctqSpan">CTQ = 4</h4>
+                                    </div>
+                                    <div class="box bg-gradient-success py-4">
+                                        <span class="badge">Quadrant-IV</span>
+                                        <h4 class="mb-0 text-white ctqSpan">CTQ = 3</h4>
+                                    </div>
+                                </div>
+                                <div class="card-body px-2">
+                                    <h6 class="mb-0 "> Risk Matrix </h6>
+                                    <p class="text-sm "> (<span class="font-weight-bolder">+15%</span>) Current 2x2 Matrix KPI status </p>
+                                    <hr class="dark horizontal m-0">
+
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 ">
+
+                                <div class="card-header p-0 position-relative mx-3 z-index-2 bg-transparent">
+                                    <div class="bg-gradient-tata shadow-success border-radius-lg py-3 pe-1">
+                                        <div class="chart">
+                                            <canvas id="chart-line" class="chart-canvas" height="200"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h6 class="mb-0 ">
+                                        CTQ Trailing Trend
+                                    </h6>
+                                    <p class="text-sm "> (<span class="font-weight-bolder">+15%</span>) increase in Monthly Perfomance of CTQ index. </p>
+                                    <hr class="dark horizontal m-0">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="card mt-5">
+                        <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                            <a href="../plantStatus/index.html">
+                                <div class="bg-gradient-secondary shadow-primary border-radius-lg pt-4 pb-3 shadow-primary border-radius-lg pt-4 pb-3">
+                                    <h6 class="text-white text-capitalize ps-3">Lucknow</h6>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="row mt-4">
+                            <div class="col-lg-6  px-4">
+                                <div class="riskMatrix_tata  text-center">
+                                    <div class="box bg-gradient-danger py-4">
+                                        <span class="badge">Quadrant-I</span>
+                                        <h4 class="mb-0 text-white ctqSpan">CTQ = 3</h4>
+                                    </div>
+                                    <div class="box bg-gradient-warning py-4">
+                                        <span class="badge">Quadrant-II</span>
+                                        <h4 class="mb-0 text-white ctqSpan">CTQ = 4</h4>
+                                    </div>
+                                    <div class="box bg-gradient-info py-4">
+                                        <span class="badge">Quadrant-III</span>
+                                        <h4 class="mb-0 text-white ctqSpan">CTQ = 3</h4>
+                                    </div>
+                                    <div class="box bg-gradient-success py-4">
+                                        <span class="badge">Quadrant-IV</span>
+                                        <h4 class="mb-0 text-white ctqSpan">CTQ = 5</h4>
+                                    </div>
+                                </div>
+                                <div class="card-body px-2">
+                                    <h6 class="mb-0 "> Risk Matrix </h6>
+                                    <p class="text-sm "> (<span class="font-weight-bolder">+15%</span>) increase in Monthly Perfomance of CTQ index. </p>
+                                    <hr class="dark horizontal m-0">
+
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+
+                                <div class="card-header p-0 position-relative mx-3 z-index-2 bg-transparent">
+                                    <div class="bg-gradient-tata shadow-success border-radius-lg py-3 pe-1">
+                                        <div class="chart">
+                                            <canvas id="chart-line1" class="chart-canvas" height="200"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h6 class="mb-0 ">
+                                        CTQ Trailing Trend
+                                    </h6>
+                                    <p class="text-sm "> (<span class="font-weight-bolder">+15%</span>) increase in Monthly Perfomance of CTQ index. </p>
+                                    <hr class="dark horizontal m-0">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <div class="card mt-5">
+                        <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                            <a href="../plantStatus/index.html">
+                                <div class="bg-gradient-secondary shadow-primary border-radius-lg pt-4 pb-3 shadow-primary border-radius-lg pt-4 pb-3">
+                                    <h6 class="text-white text-capitalize ps-3">Pantnagar</h6>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-lg-6 px-4">
+                                <div class="riskMatrix_tata  text-center">
+                                    <div class="box bg-gradient-danger py-4">
+                                        <span class="badge">Quadrant-I</span>
+                                        <h4 class="mb-0 text-white ctqSpan">CTQ = 3</3h4>
+                                    </div>
+                                    <div class="box bg-gradient-warning py-4">
+                                        <span class="badge">Quadrant-II</span>
+                                        <h4 class="mb-0 text-white ctqSpan">CTQ = 4</h4>
+                                    </div>
+                                    <div class="box bg-gradient-info py-4">
+                                        <span class="badge">Quadrant-III</span>
+                                        <h4 class="mb-0 text-white ctqSpan">CTQ = 3</h4>
+                                    </div>
+                                    <div class="box bg-gradient-success py-4">
+                                        <span class="badge">Quadrant-IV</span>
+                                        <h4 class="mb-0 text-white ctqSpan">CTQ = 3</h4>
+                                    </div>
+                                </div>
+                                <div class="card-body px-2">
+                                    <h6 class="mb-0 "> Risk Matrix </h6>
+                                    <p class="text-sm "> (<span class="font-weight-bolder">+15%</span>) increase in Monthly Perfomance of CTQ index. </p>
+                                    <hr class="dark horizontal m-0">
+
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 ">
+
+                                <div class="card-header p-0 position-relative mx-3 z-index-2 bg-transparent">
+                                    <div class="bg-gradient-tata shadow-success border-radius-lg py-3 pe-1">
+                                        <div class="chart">
+                                            <canvas id="chart-line2" class="chart-canvas" height="200"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h6 class="mb-0 ">
+                                        CTQ Trailing Trend
+                                    </h6>
+                                    <p class="text-sm "> (<span class="font-weight-bolder">+15%</span>) increase in Monthly Perfomance of CTQ index. </p>
+                                    <hr class="dark horizontal m-0">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card mt-5">
+                        <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                            <a href="../plantStatus/index.html">
+                                <div class="bg-gradient-secondary shadow-primary border-radius-lg pt-4 pb-3 shadow-primary border-radius-lg pt-4 pb-3">
+                                    <h6 class="text-white text-capitalize ps-3">Dharwad</h6>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-lg-6 px-4">
+                                <div class="riskMatrix_tata  text-center">
+                                    <div class="box bg-gradient-danger py-4">
+                                        <span class="badge">Quadrant-I</span>
+                                        <h4 class="mb-0 text-white ctqSpan">CTQ = 3</h4>
+                                    </div>
+                                    <div class="box bg-gradient-warning py-4">
+                                        <span class="badge">Quadrant-II</span>
+                                        <h4 class="mb-0 text-white ctqSpan">CTQ = 2</h4>
+                                    </div>
+                                    <div class="box bg-gradient-info py-4">
+                                        <span class="badge">Quadrant-III</span>
+                                        <h4 class="mb-0 text-white ctqSpan">CTQ = 3</h4>
+                                    </div>
+                                    <div class="box bg-gradient-success py-4">
+                                        <span class="badge">Quadrant-IV</span>
+                                        <h4 class="mb-0 text-white ctqSpan">CTQ = 3</h4>
+                                    </div>
+                                </div>
+                                <div class="card-body px-2">
+                                    <h6 class="mb-0 "> Risk Matrix </h6>
+                                    <p class="text-sm "> (<span class="font-weight-bolder">+15%</span>) increase in Monthly Perfomance of CTQ index. </p>
+                                    <hr class="dark horizontal m-0">
+
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 ">
+
+                                <div class="card-header p-0 position-relative mx-3 z-index-2 bg-transparent">
+                                    <div class="bg-gradient-tata shadow-success border-radius-lg py-3 pe-1">
+                                        <div class="chart">
+                                            <canvas id="chart-line3" class="chart-canvas" height="200"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h6 class="mb-0 ">
+                                        CTQ Trailing Trend
+                                    </h6>
+                                    <p class="text-sm "> (<span class="font-weight-bolder">+15%</span>) increase in Monthly Perfomance of CTQ index. </p>
+                                    <hr class="dark horizontal m-0">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="card mt-5">
+                        <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                            <a href="../plantStatus/index.html">
+                                <div class="bg-gradient-secondary shadow-primary border-radius-lg pt-4 pb-3 shadow-primary border-radius-lg pt-4 pb-3">
+                                    <h6 class="text-white text-capitalize ps-3">Jamshedpur</h6>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="row ">
+                            <div class="col-lg-6 mt-4 mb-3 px-4">
+                                <div class="riskMatrix_tata  text-center">
+                                    <div class="box bg-gradient-danger py-4">
+                                        <span class="badge">Quadrant-I</span>
+                                        <h4 class="mb-0 text-white ctqSpan">CTQ = 3</h4>
+                                    </div>
+                                    <div class="box bg-gradient-warning py-4">
+                                        <span class="badge">Quadrant-II</span>
+                                        <h4 class="mb-0 text-white ctqSpan">CTQ = 4</h4>
+                                    </div>
+                                    <div class="box bg-gradient-info py-4">
+                                        <span class="badge">Quadrant-III</span>
+                                        <h4 class="mb-0 text-white ctqSpan">CTQ = 3</h4>
+                                    </div>
+                                    <div class="box bg-gradient-success py-4">
+                                        <span class="badge">Quadrant-IV</span>
+                                        <h4 class="mb-0 text-white ctqSpan">CTQ = 3</h4>
+                                    </div>
+                                </div>
+                                <div class="card-body px-2">
+                                    <h6 class="mb-0 "> Risk Matrix </h6>
+                                    <p class="text-sm "> (<span class="font-weight-bolder">+15%</span>) increase in Monthly Perfomance of CTQ index. </p>
+                                    <hr class="dark horizontal m-0">
+
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 mt-4 mb-4">
+
+                                <div class="card-header p-0 position-relative mx-3 z-index-2 bg-transparent">
+                                    <div class="bg-gradient-tata shadow-success border-radius-lg py-3 pe-1">
+                                        <div class="chart">
+                                            <canvas id="chart-line4" class="chart-canvas" height="200"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h6 class="mb-0 ">
+                                        CTQ Trailing Trend
+                                    </h6>
+                                    <p class="text-sm "> (<span class="font-weight-bolder">+15%</span>) increase in Monthly Perfomance of CTQ index. </p>
+                                    <hr class="dark horizontal m-0">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="col-lg-4 col-md-4 mt-4 mb-4 overall_summary">
+                    <div class="card ">
+                        <a href="../2x2matrix/index.html">
+                            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                                <div class="bg-gradient-dark shadow-primary border-radius-lg pt-4 pb-3">
+                                    <h6 class="text-white text-capitalize ps-3">CVBU</h6>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="row mt-2 px-4">
+
+
+                            <div class="col-lg-12 ">
+
+                                <div class="riskMatrix_tata  mt-3 text-center">
+                                    <div class="box bg-gradient-danger py-4">
+                                        <span class="badge">Quadrant-I</span>
+                                        <h4 class="mb-0 text-white ctqSpan">CTQ = 16</h4>
+                                    </div>
+                                    <div class="box bg-gradient-warning py-4">
+                                        <span class="badge">Quadrant-II</span>
+                                        <h4 class="mb-0 text-white ctqSpan">CTQ = 18</h4>
+                                    </div>
+                                    <div class="box bg-gradient-info py-4">
+                                        <span class="badge">Quadrant-III</span>
+                                        <h4 class="mb-0 text-white ctqSpan">CTQ = 16</h4>
+                                    </div>
+                                    <div class="box bg-gradient-success py-4">
+                                        <span class="badge">Quadrant-IV</span>
+                                        <h4 class="mb-0 text-white ctqSpan">CTQ = 17</h4>
+                                    </div>
+                                </div>
+                                <div class="card-body pt-3 px-2 pb-0">
+                                    <h6 class="mb-0 "> Risk Matrix </h6>
+                                    <p class="text-sm "> (<span class="font-weight-bolder">+15%</span>) increase in Monthly Perfomance of CTQ index. </p>
+                                    <hr class="dark horizontal m-0">
+
+                                </div>
+
+                            </div>
+                            <div class="col-lg-12 col-md-6 mt-2  ">
+
+                                <div class="card-header p-0 position-relative  z-index-2 bg-transparent">
+                                    <div class="bg-gradient-tata shadow-success border-radius-lg py-2 pe-1">
+                                        <div class="chart">
+                                            <canvas id="chart-line5" class="chart-canvas" height="200"></canvas>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="card-body pt-3 px-2 pb-0">
+                                    <h6 class="mb-0 ">
+                                        CTQ Trailing Trend
+                                    </h6>
+                                    <p class="text-sm "> (<span class="font-weight-bolder">+15%</span>) increase in Monthly Perfomance of CTQ index. </p>
+                                    <hr class="dark horizontal m-0">
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+    </main>
+
+    <!--Demo Application Helper Files-->
+    <script src="../../assets/js/quickActionDemo.js"></script>
+    <!--   Core JS Files   -->
+    <script src="../../assets/js/core/popper.min.js"></script>
+    <script src="../../assets/js/core/bootstrap.min.js"></script>
+    <script src="../../assets/js/plugins/perfect-scrollbar.min.js"></script>
+    <script src="../../assets/js/plugins/smooth-scrollbar.min.js"></script>
+    <script src="../../assets/js/plugins/chartjs.min.js"></script>
+    <script>
+
+        var ctx1 = document.getElementById("chart-line").getContext("2d");
+        var ctx2 = document.getElementById("chart-line1").getContext("2d");
+        var ctx3 = document.getElementById("chart-line2").getContext("2d");
+        var ctx4 = document.getElementById("chart-line3").getContext("2d");
+        var ctx5 = document.getElementById("chart-line4").getContext("2d");
+        var ctx6 = document.getElementById("chart-line5").getContext("2d");
+
+        new Chart(ctx1, {
+            type: "line",
+            data: {
+                labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+                datasets: [{
+                    label: "CTQ Count",
+                    tension: 0,
+                    borderWidth: 0,
+                    pointRadius: 5,
+                    pointBackgroundColor: "rgba(255, 255, 255, .8)",
+                    pointBorderColor: "transparent",
+                    borderColor: "rgba(255, 255, 255, .8)",
+                    borderColor: "rgba(255, 255, 255, .8)",
+                    borderWidth: 4,
+                    backgroundColor: "transparent",
+                    fill: true,
+                    data: [50, 40, 300, 320, 500, 350, 200, 230, 500],
+                    maxBarThickness: 6
+
+                }],
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false,
+                    }
+                },
+                interaction: {
+                    intersect: false,
+                    mode: 'index',
+                },
+                scales: {
+                    y: {
+                        grid: {
+                            drawBorder: false,
+                            display: true,
+                            drawOnChartArea: true,
+                            drawTicks: false,
+                            borderDash: [5, 5],
+                            color: 'rgba(255, 255, 255, .2)'
+                        },
+                        ticks: {
+                            display: true,
+                            color: '#f8f9fa',
+                            padding: 10,
+                            font: {
+                                size: 14,
+                                weight: 300,
+                                family: "Roboto",
+                                style: 'normal',
+                                lineHeight: 2
+                            },
+                        }
+                    },
+                    x: {
+                        grid: {
+                            drawBorder: false,
+                            display: false,
+                            drawOnChartArea: false,
+                            drawTicks: false,
+                            borderDash: [5, 5]
+                        },
+                        ticks: {
+                            display: true,
+                            color: '#f8f9fa',
+                            padding: 10,
+                            font: {
+                                size: 14,
+                                weight: 300,
+                                family: "Roboto",
+                                style: 'normal',
+                                lineHeight: 2
+                            },
+                        }
+                    },
+                },
+            },
+        });
+        new Chart(ctx2, {
+            type: "line",
+            data: {
+                labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+                datasets: [{
+                    label: "CTQ Count",
+                    tension: 0,
+                    borderWidth: 0,
+                    pointRadius: 5,
+                    pointBackgroundColor: "rgba(255, 255, 255, .8)",
+                    pointBorderColor: "transparent",
+                    borderColor: "rgba(255, 255, 255, .8)",
+                    borderColor: "rgba(255, 255, 255, .8)",
+                    borderWidth: 4,
+                    backgroundColor: "transparent",
+                    fill: true,
+                    data: [50, 40, 300, 320, 500, 350, 200, 230, 500],
+                    maxBarThickness: 6
+
+                }],
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false,
+                    }
+                },
+                interaction: {
+                    intersect: false,
+                    mode: 'index',
+                },
+                scales: {
+                    y: {
+                        grid: {
+                            drawBorder: false,
+                            display: true,
+                            drawOnChartArea: true,
+                            drawTicks: false,
+                            borderDash: [5, 5],
+                            color: 'rgba(255, 255, 255, .2)'
+                        },
+                        ticks: {
+                            display: true,
+                            color: '#f8f9fa',
+                            padding: 10,
+                            font: {
+                                size: 14,
+                                weight: 300,
+                                family: "Roboto",
+                                style: 'normal',
+                                lineHeight: 2
+                            },
+                        }
+                    },
+                    x: {
+                        grid: {
+                            drawBorder: false,
+                            display: false,
+                            drawOnChartArea: false,
+                            drawTicks: false,
+                            borderDash: [5, 5]
+                        },
+                        ticks: {
+                            display: true,
+                            color: '#f8f9fa',
+                            padding: 10,
+                            font: {
+                                size: 14,
+                                weight: 300,
+                                family: "Roboto",
+                                style: 'normal',
+                                lineHeight: 2
+                            },
+                        }
+                    },
+                },
+            },
+        });
+        new Chart(ctx3, {
+            type: "line",
+            data: {
+                labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+                datasets: [{
+                    label: "CTQ Count",
+                    tension: 0,
+                    borderWidth: 0,
+                    pointRadius: 5,
+                    pointBackgroundColor: "rgba(255, 255, 255, .8)",
+                    pointBorderColor: "transparent",
+                    borderColor: "rgba(255, 255, 255, .8)",
+                    borderColor: "rgba(255, 255, 255, .8)",
+                    borderWidth: 4,
+                    backgroundColor: "transparent",
+                    fill: true,
+                    data: [50, 40, 300, 320, 500, 350, 200, 230, 500],
+                    maxBarThickness: 6
+
+                }],
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false,
+                    }
+                },
+                interaction: {
+                    intersect: false,
+                    mode: 'index',
+                },
+                scales: {
+                    y: {
+                        grid: {
+                            drawBorder: false,
+                            display: true,
+                            drawOnChartArea: true,
+                            drawTicks: false,
+                            borderDash: [5, 5],
+                            color: 'rgba(255, 255, 255, .2)'
+                        },
+                        ticks: {
+                            display: true,
+                            color: '#f8f9fa',
+                            padding: 10,
+                            font: {
+                                size: 14,
+                                weight: 300,
+                                family: "Roboto",
+                                style: 'normal',
+                                lineHeight: 2
+                            },
+                        }
+                    },
+                    x: {
+                        grid: {
+                            drawBorder: false,
+                            display: false,
+                            drawOnChartArea: false,
+                            drawTicks: false,
+                            borderDash: [5, 5]
+                        },
+                        ticks: {
+                            display: true,
+                            color: '#f8f9fa',
+                            padding: 10,
+                            font: {
+                                size: 14,
+                                weight: 300,
+                                family: "Roboto",
+                                style: 'normal',
+                                lineHeight: 2
+                            },
+                        }
+                    },
+                },
+            },
+        });
+        new Chart(ctx4, {
+            type: "line",
+            data: {
+                labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+                datasets: [{
+                    label: "CTQ Count",
+                    tension: 0,
+                    borderWidth: 0,
+                    pointRadius: 5,
+                    pointBackgroundColor: "rgba(255, 255, 255, .8)",
+                    pointBorderColor: "transparent",
+                    borderColor: "rgba(255, 255, 255, .8)",
+                    borderColor: "rgba(255, 255, 255, .8)",
+                    borderWidth: 4,
+                    backgroundColor: "transparent",
+                    fill: true,
+                    data: [50, 40, 300, 320, 500, 350, 200, 230, 500],
+                    maxBarThickness: 6
+
+                }],
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false,
+                    }
+                },
+                interaction: {
+                    intersect: false,
+                    mode: 'index',
+                },
+                scales: {
+                    y: {
+                        grid: {
+                            drawBorder: false,
+                            display: true,
+                            drawOnChartArea: true,
+                            drawTicks: false,
+                            borderDash: [5, 5],
+                            color: 'rgba(255, 255, 255, .2)'
+                        },
+                        ticks: {
+                            display: true,
+                            color: '#f8f9fa',
+                            padding: 10,
+                            font: {
+                                size: 14,
+                                weight: 300,
+                                family: "Roboto",
+                                style: 'normal',
+                                lineHeight: 2
+                            },
+                        }
+                    },
+                    x: {
+                        grid: {
+                            drawBorder: false,
+                            display: false,
+                            drawOnChartArea: false,
+                            drawTicks: false,
+                            borderDash: [5, 5]
+                        },
+                        ticks: {
+                            display: true,
+                            color: '#f8f9fa',
+                            padding: 10,
+                            font: {
+                                size: 14,
+                                weight: 300,
+                                family: "Roboto",
+                                style: 'normal',
+                                lineHeight: 2
+                            },
+                        }
+                    },
+                },
+            },
+        });
+        new Chart(ctx5, {
+            type: "line",
+            data: {
+                labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+                datasets: [{
+                    label: "CTQ Count",
+                    tension: 0,
+                    borderWidth: 0,
+                    pointRadius: 5,
+                    pointBackgroundColor: "rgba(255, 255, 255, .8)",
+                    pointBorderColor: "transparent",
+                    borderColor: "rgba(255, 255, 255, .8)",
+                    borderColor: "rgba(255, 255, 255, .8)",
+                    borderWidth: 4,
+                    backgroundColor: "transparent",
+                    fill: true,
+                    data: [50, 40, 300, 320, 500, 350, 200, 230, 500],
+                    maxBarThickness: 6
+
+                }],
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false,
+                    }
+                },
+                interaction: {
+                    intersect: false,
+                    mode: 'index',
+                },
+                scales: {
+                    y: {
+                        grid: {
+                            drawBorder: false,
+                            display: true,
+                            drawOnChartArea: true,
+                            drawTicks: false,
+                            borderDash: [5, 5],
+                            color: 'rgba(255, 255, 255, .2)'
+                        },
+                        ticks: {
+                            display: true,
+                            color: '#f8f9fa',
+                            padding: 10,
+                            font: {
+                                size: 14,
+                                weight: 300,
+                                family: "Roboto",
+                                style: 'normal',
+                                lineHeight: 2
+                            },
+                        }
+                    },
+                    x: {
+                        grid: {
+                            drawBorder: false,
+                            display: false,
+                            drawOnChartArea: false,
+                            drawTicks: false,
+                            borderDash: [5, 5]
+                        },
+                        ticks: {
+                            display: true,
+                            color: '#f8f9fa',
+                            padding: 10,
+                            font: {
+                                size: 14,
+                                weight: 300,
+                                family: "Roboto",
+                                style: 'normal',
+                                lineHeight: 2
+                            },
+                        }
+                    },
+                },
+            },
+        });
+        new Chart(ctx6, {
+            type: "line",
+            data: {
+                labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+                datasets: [{
+                    label: "CTQ Count",
+                    tension: 0,
+                    borderWidth: 0,
+                    pointRadius: 5,
+                    pointBackgroundColor: "rgba(255, 255, 255, .8)",
+                    pointBorderColor: "transparent",
+                    borderColor: "rgba(255, 255, 255, .8)",
+                    borderColor: "rgba(255, 255, 255, .8)",
+                    borderWidth: 4,
+                    backgroundColor: "transparent",
+                    fill: true,
+                    data: [50, 40, 300, 320, 500, 350, 200, 230, 500],
+                    maxBarThickness: 6
+
+                }],
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false,
+                    }
+                },
+                interaction: {
+                    intersect: false,
+                    mode: 'index',
+                },
+                scales: {
+                    y: {
+                        grid: {
+                            drawBorder: false,
+                            display: true,
+                            drawOnChartArea: true,
+                            drawTicks: false,
+                            borderDash: [5, 5],
+                            color: 'rgba(255, 255, 255, .2)'
+                        },
+                        ticks: {
+                            display: true,
+                            color: '#f8f9fa',
+                            padding: 10,
+                            font: {
+                                size: 14,
+                                weight: 300,
+                                family: "Roboto",
+                                style: 'normal',
+                                lineHeight: 2
+                            },
+                        }
+                    },
+                    x: {
+                        grid: {
+                            drawBorder: false,
+                            display: false,
+                            drawOnChartArea: false,
+                            drawTicks: false,
+                            borderDash: [5, 5]
+                        },
+                        ticks: {
+                            display: true,
+                            color: '#f8f9fa',
+                            padding: 10,
+                            font: {
+                                size: 14,
+                                weight: 300,
+                                family: "Roboto",
+                                style: 'normal',
+                                lineHeight: 2
+                            },
+                        }
+                    },
+                },
+            },
+        });
+
+    </script>
+    <script>
+        var win = navigator.platform.indexOf('Win') > -1;
+        if (win && document.querySelector('#sidenav-scrollbar')) {
+            var options = {
+                damping: '0.5'
+            }
+            Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+        }
+    </script>
+    <script src="../../JS/buttons.github.io_buttons.js"></script>
+
+    <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+    <script src="../../assets/js/material-dashboard.min.js?v=3.0.4"></script>
+</body>
+
+</html>

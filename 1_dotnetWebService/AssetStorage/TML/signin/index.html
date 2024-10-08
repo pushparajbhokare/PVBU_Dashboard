@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QDAS Analytics Dashboard</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./asset/swiper.css">
+</head>
+<body>
+    <!-- https://dribbble.com/shots/15392711-Dashboard-Login-Sign-Up/-->
+    <div class="Main_container">
+
+        <div class="login-container">
+            <div class="login-form">
+                <div class="header">
+                    <h2>Q-Das Dashboard for CTQ Monitoring</h2>
+                </div>
+                <div class="login-form-inner">
+                    <div class="logo"><img src="./asset/Logo.jpg" width="60%" alt=""></div>
+                    <h1 style="text-align: center;font-size: 1.5rem;color: #666;">Login</h1>
+                  
+                    <div class="sign-in-seperator">
+                        <span>Sign in to TML</span>
+                    </div>
+
+                    <div class="login-form-group">
+                        <label for="username">User Name <span class="required-star">*</span></label>
+                        <input type="text" placeholder="John Doe" id="username" required>
+                    </div>
+                    <div class="login-form-group" >
+                        <label for="pwd">Password <span class="required-star">*</span></label>
+                        <input autocomplete="off" type="password" placeholder="Minimum 8 characters" id="pwd" required >
+                    </div>
+                    <div class="LogIn" onclick="ValidateUser()">
+                        <!--../CVBU/index.html-->
+                        <a  class="rounded-button login-cta" style="cursor:pointer">Login</a>
+                    </div>
+
+                    <div class="register-div">
+                        <!-- Not registered yet? <a href="#" class="link create-account" -link>Create an account ?</a> -->
+                    </div>
+                </div>
+
+            </div>
+            <div class="onboarding">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide color-1">
+                            <div class="slide-image">
+                                <a href="https://www.q-das.com/en/products/software/q-das-o-qis-real-time-visualisation-1"> <img src="./asset/img/Q-DAS-O-QIS.jpg" loading="lazy" alt="" /></a>
+                            </div>
+                            <div class="slide-content">
+                                <h2>Q-DAS O-QIS </h2>
+                                <p>Q-DAS O-QIS provides essential features fully supporting users in their quality assessment tasks.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide color-1">
+                            <div class="slide-image">
+                                <a href="https://www.q-das.com/en/products/software/q-das-qs-stat-process-qualification-1"> <img src="./asset/img/Q-DAS-qs-STAT.jpg" loading="lazy" alt="" /></a>
+                            </div>
+                            <div class="slide-content">
+                                <h2>Q-DAS qs-STAT</h2>
+                                <p>Q-DAS qs-STAT is a software package designed to evaluate and assess production-relevant quality information statistically.</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide color-1">
+                            <div class="slide-image">
+                                <a href="https://www.q-das.com/en/products/software/q-das-procella-process-control"> <img src="./asset/img/Q-DAS-procella-Process-Control.jpg" loading="lazy" alt="" /></a>
+                            </div>
+                            <div class="slide-content">
+                                <h2>
+                                    Q-DAS procella
+                                </h2>
+                                <p>Q-DAS procella is a statistical process control software enabling recording of measured values and identification of trends.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide color-1">
+                            <div class="slide-image">
+                                <a href="https://hexagon.com/products/product-groups/measurement-inspection-software/3d-data-management/q-das-emma"> <img src="./asset/img/Q-DAS-eMMA-Assembler.jpg" loading="lazy" alt="" /></a>
+                            </div>
+                            <div class="slide-content">
+                                <h2>
+                                    Q-DAS eMMA
+                                </h2>
+                                <p>The Q-DAS eMMA software suite for dimensional data management, quality planning and analytics brings product development and measurement technology closer together.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide color-1">
+                            <div class="slide-image">
+                                <a href="https://www.q-das.com/en/products/software/q-das-destra-statistical-package"> <img src="./asset/img/Q-DAS destra.jpg" loading="lazy" alt="" /></a>
+                            </div>
+                            <div class="slide-content">
+                                <h2>
+                                    Q-DAS destra
+                                </h2>
+                                <p>Q-DAS destra is a process optimisation tool that employs a rich set of statistical methods to optimise process conditions.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide color-1">
+                            <div class="slide-image">
+                                <a href="https://www.q-das.com/en/products/software/q-das-solaramp-inspection-process-2"> <img src="./asset/img/Q-DAS-solaraMP.jpg" loading="lazy" alt="" /></a>
+                            </div>
+                            <div class="slide-content">
+                                <h2>Q-DAS solara.MP</h2>
+                                <p>Q-DAS solara.MP conducts necessary capability studies to establish measurement system capability.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide color-1">
+                            <div class="slide-image">
+                                <a href="https://www.q-das.com/en/products/software/q-das-vidara-design-of-experiments"> <img src="./asset/img/Q-DAS-vidara-Design.jpg" loading="lazy" alt="" /></a>
+                            </div>
+                            <div class="slide-content">
+                                <h2>Q-DAS vidara </h2>
+                                <p>Q-DAS vidara is a statistical software for design of experiments, variance and regression analysis and reliability analysis.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide color-1">
+                            <div class="slide-image">
+                                <a href="https://www.q-das.com/en/products/software/q-das-o-qis-real-time-visualisation-1"> <img src="./asset/img/Q-DAS-M-QIS.jpg" loading="lazy" alt="" /></a>
+                            </div>
+                            <div class="slide-content">
+                                <h2>Q-DAS M-QIS  </h2>
+                                <p>Q-DAS M-QIS processes quality information and increases the transparency of workflows, processes and business transactions.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.0/js/swiper.min.js"></script> -->
+    <script src="../../JS/jquery-1.9.1.min.js"></script>
+    <script src="./asset/swiper.min.js"></script>
+    <script src="./index.js"></script>
+
+</body>
+</html>

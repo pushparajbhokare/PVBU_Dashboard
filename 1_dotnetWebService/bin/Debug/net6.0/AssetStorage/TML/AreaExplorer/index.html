@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="../../assets/img/favicon.png">
+    <title>
+        QDAS Analytics Dashboard
+    </title>
+    <!--     Fonts and icons     -->
+    <link href="../../../CSS/googleapis_family.css" rel="stylesheet" />
+    <!-- Nucleo Icons -->
+    <link href="../../assets/css/nucleo-icons.css" rel="stylesheet" />
+
+    <link href="../../assets/css/nucleo-svg.css" rel="stylesheet" />
+
+    <!-- CSS Files -->
+    <link id="pagestyle" href="../../assets/css/material-dashboard.css?v=3.0.4" rel="stylesheet" />
+    <!-- additional custom CSS Files -->
+    <link id="customstyle" href="../../assets/css/other_addition.css" rel="stylesheet" />
+    <!-- <link href="../../JS/css.css" rel="stylesheet" /> -->
+
+    <script src="../../JS/jquery-1.9.1.min.js"></script>
+    <script src="../../JS/echarts.min.js"></script>
+
+
+    <!-- Datetime JQuery -->
+    <!-- <link href="../../JS/jquery-ui.css" rel="stylesheet" />
+    <link href="../../JS/smoothness-jquery-ui.css" rel="stylesheet" />
+    <script src="../../JS/jquery-ui.min.js"></script> -->
+
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+
+<body class="g-sidenav-show  bg-gray-200" code="AREA_EXPLORER.VIEW_AREA_EXPLORER">
+
+    <!--------------------------- Ajax Loader ---------------------------->
+    <div class="loader" id="AjaxLoader" style="display:none;">
+        <div class="strip-holder">
+            <div class="strip-1"></div>
+            <div class="strip-2"></div>
+            <div class="strip-3"></div>
+        </div>
+    </div>
+    <!-- Sidebar -->
+
+    <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark" id="sidenav-main">
+    </aside>
+    <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+        <!-- Navbar -->
+        <div id="displayNAV"></div>
+
+        <!-- End Navbar -->
+        <div class="container-fluid py-4">
+            <div class="fixed-plugin  ps" onclick="history.back()">
+                <a class="fixed-plugin-button text-dark position-fixed affix-top p-2 ">
+                    <img style="border-radius: 50%;" src="../../img/icons/arrow_back.svg" alt="">
+
+                </a>
+
+
+            </div>
+            <div class="card mb-5 mt-4">
+
+                <div class="card-body  py-1">
+                    <div class="row align-items-center">
+                        <div class="col-sm-4 " hidden>
+
+                            <span>Plant  </span>
+                            <select id="plant_id" class="form-select mt-1 p-2" aria-label="Default select example">
+                            </select>
+
+                        </div>
+                        <div class="col-sm-3">
+
+                            <span class="">No. of Days </span>
+                            <select id="days_id" class="form-select mt-1 p-2" aria-label="Default select example">
+                            </select>
+
+                        </div>
+                        <div class="col-sm-4">
+
+                            <span class="">Area </span>
+                            <select id="Area_id" class="form-select mt-1 p-2" aria-label="Default select example">
+                            </select>
+
+                        </div>
+
+
+                        <div class="col-sm-3">
+
+                            <button type="button" class="btn btn-info mt-5 ml-4" id="btnRefresh">Refresh</button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="card p-0" style="margin-bottom:10px!important;background: #f0f2f5;">
+
+                <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                    <div id="AreaExploreTitle" class="bg-gradient-secondary shadow-primary border-radius-lg pt-4 pb-3 shadow-primary border-radius-lg pt-4 pb-3">
+                    </div>
+                </div>
+                <div class="card-body container-fluid ">
+
+
+
+                    <div class="row" id="divChart" style="margin: auto;">
+
+                    </div>
+
+
+                </div>
+
+
+
+
+            </div>
+            <!-- </div> -->
+
+
+        </div>
+
+    </main>
+    <script src="../../JS/Api_Call.js"></script>
+    <script src="../../JS/QdasFunctions.js"></script>
+    <script src="./level1.js"></script>
+    <!-- <script src="../../JS/moment.min.js"></script> -->
+
+    <!--Demo Application Helper Files-->
+    <script src="../../assets/js/quickActionDemo.js"></script>
+    <!--   Core JS Files   -->
+    <script src="../../assets/js/core/popper.min.js"></script>
+    <script src="../../assets/js/core/bootstrap.min.js"></script>
+    <script src="../../assets/js/plugins/perfect-scrollbar.min.js"></script>
+    <script src="../../assets/js/plugins/smooth-scrollbar.min.js"></script>
+    <script src="../../assets/js/plugins/chartjs.min.js"></script>
+
+    <script src="../../JS/buttons.github.io_buttons.js"></script>
+
+    <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+    <script src="../../assets/js/material-dashboard.min.js?v=3.0.4"></script>
+</body>
+
+</html>

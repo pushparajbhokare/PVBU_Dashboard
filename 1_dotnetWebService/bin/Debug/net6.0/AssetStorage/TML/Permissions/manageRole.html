@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="../../assets/img/favicon.png">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+
+    <title>QDAS Analytics Dashboard</title>
+
+    <!-- Fonts and icons -->
+    <!-- <link href="../../../CSS/googleapis_family.css" rel="stylesheet" /> -->
+    <!-- Nucleo Icons -->
+    <link href="../../assets/css/nucleo-icons.css" rel="stylesheet" />
+    <link href="../../assets/css/nucleo-svg.css" rel="stylesheet" />
+
+    <!-- CSS Files -->
+    <link id="pagestyle" href="../../assets/css/material-dashboard.css?v=3.0.4" rel="stylesheet" />
+    <!-- additional custom CSS Files -->
+    <link id="customstyle" href="../../assets/css/other_addition.css" rel="stylesheet" />
+
+    <script src="../../JS/jquery-1.9.1.min.js"></script>
+    <link href="../../JS/bootstrap-multiselect_css.css" rel="stylesheet" />
+    <script src="../../JS/bootstrap-multiselect.js"></script>
+
+    <!-- Datetime JQuery -->
+    <link href="../../JS/jquery-ui.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="./permission.css" />
+    <link href="../../JS/smoothness-jquery-ui.css" rel="stylesheet" />
+    <link mailto:href="../../css/sweetalert2@11.7.32_dist_sweetalert2.min.css" rel="stylesheet" />
+    <script src="../../JS/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+
+    <!-- Table datatable css -->
+    <link href="../../assets/libs/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../assets/libs/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../assets/libs/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../assets/libs/datatables/select.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        .page-item.active .page-link {
+            color: #fff;
+        }
+
+        div.dataTables_filter input {
+            border: 1px solid !important;
+        }
+    </style>
+</head>
+
+<body class="g-sidenav-show  bg-gray-200" code="CONFIG_ROLE.VIEW_CONFIG_ROLE">
+    <div class="loader" id="AjaxLoader" style="display:none;">
+        <div class="strip-holder">
+            <div class="strip-1"></div>
+            <div class="strip-2"></div>
+            <div class="strip-3"></div>
+        </div>
+    </div>
+
+    <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark" id="sideMenuBar">
+    </aside>
+
+    <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+        <div id="shownav"></div>
+        <div class="container-fluid ">
+            <div class="col-lg-6 " id="mainTable">
+                <div class="card mb-4">
+                    <div class="table-responsive">
+                        <table class="table align-items-center mb-0">
+                            <thead style="text-align:center;">
+                                <tr>
+                                    <th class="text-uppercase  text-xxs font-weight-bolder ">
+                                        Role Name
+                                    </th>
+                                    <th class="text-uppercase  text-xxs font-weight-bolder ">
+                                        Role Code
+                                    </th>
+                                    <th class="text-center text-uppercase  text-xxs font-weight-bolder ">
+                                        View
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody id="manageroleTable">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="addrolemodal" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header p-2">
+                            <h5 class="">Add Role</h5>
+                            <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close" onclick="$('#addrolemodal').modal('hide');">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <div class="modal-body ">
+                            <div class="card card-plain">
+                                <div class="card-body p-0">
+                                    <form class="form text-left">
+                                        <input type="text" id="Id" hidden />
+                                        <div class="row p-2">
+                                            <div class="col-sm-4"><label for="roleCode">Role Code</label></div>
+                                            <div class="col-sm-6"><input type="text" id="role_code" required /></div>
+                                        </div>
+                                        <div class="row p-2">
+                                            <div class="col-sm-4"><label for="roleName">Role Name</label></div>
+                                            <div class="col-sm-6"><input type="text" id="role_name" required /></div>
+                                        </div>
+                                        <div class="row p-2">
+                                            <div class="col-sm-4"><label for="entryPage">Entry Page</label></div>
+                                            <div class="col-sm-6">
+                                                <select id="pagesDropDown" style="width:200px; ">
+                                                    <option value="CVBU">CVBU Page</option>
+                                                    <option value="plantStatus">Plant Status </option>
+                                                    <option value="AreaExplorer">Area Explorer </option>
+                                                    <option value="ModelExplorer">Model Explorer </option>
+                                                    <option value="CharacteristicExplorer">Characteristic Explorer </option>
+                                                    <option value="TargetInspection">Target Inspection </option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class=" py-2">
+                                            <div class="saveData" style="display:flex;justify-content:center;align-content:center">
+                                                <button type="button" class="px-4 rounded btn btn-sm mb-0" style="background:#344767; color:#fff; " id="saveRole">Save</button>
+                                                <button type="button" class="mx-2 px-4 rounded btn btn-sm mb-0 " style="background:#344767; color:#fff; " id="cancelRole">Cancel</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--Demo Application Helper Files-->
+    <script src="../../assets/js/quickActionDemo.js"></script>
+    <!-- Core JS Files -->
+    <script src="../../assets/js/core/popper.min.js"></script>
+    <script src="../../assets/js/core/bootstrap.min.js"></script>
+    <script src="../../assets/js/plugins/perfect-scrollbar.min.js"></script>
+    <script src="../../assets/js/plugins/smooth-scrollbar.min.js"></script>
+    <script src="../../assets/js/plugins/chartjs.min.js"></script>
+    <script src="../../JS/buttons.github.io_buttons.js"></script>
+    <script src="../../assets/libs/datatables/jquery.dataTables.min.js"></script>
+    <script src="../../assets/libs/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="../../assets/libs/datatables/dataTables.responsive.min.js"></script>
+    <script src="../../assets/libs/datatables/responsive.bootstrap4.min.js"></script>
+    <script src="../../assets/libs/datatables/dataTables.buttons.min.js"></script>
+    <script src="../../assets/libs/datatables/buttons.bootstrap4.min.js"></script>
+    <script src="../../assets/libs/datatables/buttons.html5.min.js"></script>
+    <script src="../../assets/libs/datatables/buttons.print.min.js"></script>
+    <script src="../../assets/libs/datatables/dataTables.keyTable.min.js"></script>
+    <script src="../../assets/libs/datatables/dataTables.select.min.js"></script>
+    <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+    <script src="../../assets/js/material-dashboard.min.js?v=3.0.4"></script>
+    <script src="../../JS/popper.min.js"></script>
+    <script src="../../JS/moment.min.js"></script>
+    <script src="../../JS/Api_Call.js"></script>
+    <script src="../../JS/QdasFunctions.js"></script>
+    <script src="./user.js"></script>
+    <script src="./manageRole.js"></script>
+</body>
+
+</html>

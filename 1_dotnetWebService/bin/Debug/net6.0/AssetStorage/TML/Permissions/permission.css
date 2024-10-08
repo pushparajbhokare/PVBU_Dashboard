@@ -1,0 +1,122 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin-top: 5px;
+    height: 98vh;
+}
+
+main {
+    position: relative;
+}
+
+#roleHeader {
+    border-bottom:0.51px solid rgb(182, 177, 177);
+    padding-right: 1rem;
+    padding-left: 1rem;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+#roleHeader h4 {
+    margin-right: 5rem;
+}
+table {
+    cursor: default;
+}
+
+table thead {
+    color: #ffe !important;  
+      background: #344767;
+      padding-top: 0;
+}
+
+
+#mainTable {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 2rem;
+}
+
+td img, select{
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: smaller;
+}
+
+select {
+    min-width: 150px;
+    min-height: 20px;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius:5px;
+}
+
+/*button {
+    margin-bottom: 1rem;
+    min-width: 150px;
+    min-height: 50px;
+    border-radius: 20px;
+    color: #ffe;
+    background: #344767;
+}*/
+
+.backButton {
+    border-radius: 50%;
+    background: red;
+}
+
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0;
+}
+
+
+
+.footer button :hover {
+    background: #344767;
+    color: #344767;
+}
+
+
+#hiddenForm {
+    width: 20%;
+    background: #ffe;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #344767;
+    border-radius: 20px;
+    min-height: 50vh;
+    box-shadow: 5px 5px 10px #344767;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#hiddenForm label {
+    color: #344767;
+    font-weight: bold;
+}
+
+#hiddenForm button {
+    border: none;
+    box-shadow: 2px 2px 5px #344767;
+    margin-top: 5vh;
+}
+
+#UserData tr td div h6{
+    font-size:18px;
+    color: #7b8098;
+}
