@@ -33,7 +33,7 @@ var dataTable = $("#char-data-table").DataTable({
         },
         {
             render: function (data, type, full, meta) {
-                return `<p class="text-sm font-weight-normal mb-0 d-flex px-3 py-1 justify-content-center align-items-center">${full.targeted_value == "" ? `undefined` : full.targeted_value  }</p>`;
+                return `<p class="text-sm font-weight-normal mb-0 d-flex px-3 py-1 justify-content-center align-items-center">${full.targeted_value == "" ? `undefined` : full.targeted_value}</p>`;
             },
             targets: 3,
         },
@@ -49,7 +49,7 @@ var dataTable = $("#char-data-table").DataTable({
             render: function (data, type, full, meta) {
                 return `  <p class="text-sm font-weight-normal mb-0 d-flex px-3 py-1 justify-content-center align-items-center">${roundNumber(
                     full.actual_value
-                   )}</p>`;
+                )}</p>`;
             },
             targets: 5,
         },
@@ -113,7 +113,7 @@ function processRefresh(userData) {
             //$(format.date(result[0].to_date, "dd-MM-yyyy"));
 
             $("#target_title").append(
-                `<h6 class="text-white text-capitalize ps-3">Inspection report From: ${FromDate} To: ${ToDate} </h6>`
+                `<h6 class="text-white text-capitalize ps-">Inspection report From: ${FromDate} To: ${ToDate} </h6>`
             );
             dataTable.clear().draw();
             dataTable.rows.add(result);

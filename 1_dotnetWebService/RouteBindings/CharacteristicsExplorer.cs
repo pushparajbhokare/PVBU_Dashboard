@@ -246,6 +246,10 @@ namespace dotnetWebService.RouteBindings
                             var resultChart823 = await ws.GetPartInfoAsync(requestChart823);
                             var part_id = resultChart823.KFieldValue;
 
+                            GetPartInfoRequest requestChart1001 = new GetPartInfoRequest(response.Handle, 1001, 1, 0);
+                            var resultChart1001 = await ws.GetPartInfoAsync(requestChart1001);
+                            var part_number = resultChart1001.KFieldValue;
+
                             GetPartInfoRequest requestChart8231 = new GetPartInfoRequest(response.Handle, 1100, 1, 0);
                             var resultChart8231 = await ws.GetPartInfoAsync(requestChart8231);
                             var plantname = resultChart8231.KFieldValue;
@@ -434,6 +438,7 @@ namespace dotnetWebService.RouteBindings
                                     range = Range_1,
                                     potIndex = potIndex,
                                     criticalIndex = criticalIndex,
+                                    part_number = part_number,
 
                                 };
 

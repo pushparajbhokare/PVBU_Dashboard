@@ -70,6 +70,8 @@ namespace App.Routings
             app.MapGet("/TML/dashboard", RouteMethods.pageRedirect);
             app.MapGet("/TML/2x2matrix", RouteMethods.pageRedirect);
             app.MapGet("/TML/plantStatus", RouteMethods.pageRedirect);
+            app.MapGet("/TML/ShopExplorer", RouteMethods.pageRedirect);
+
             app.MapGet("/TML/AreaExplorer", RouteMethods.pageRedirect);
             app.MapGet("/TML/ModalExplorer", RouteMethods.pageRedirect);
             app.MapGet("/TML/CharacteristicExplorer", RouteMethods.pageRedirect);

@@ -22,6 +22,7 @@
         public string range { get; set; }
         public string potIndex { get; set; }
         public string criticalIndex { get; set; }
+        public string part_number { get; set; }
     }
 
     public class month_record

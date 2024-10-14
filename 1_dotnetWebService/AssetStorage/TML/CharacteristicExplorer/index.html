@@ -34,6 +34,8 @@
     <link href="../../assets/libs/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
     <link href="../../assets/libs/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
     <link href="../../assets/libs/datatables/select.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <style>
         .page-item.active .page-link {
             color: #fff;
@@ -96,61 +98,88 @@
 
                 <div class="card-body py-2">
                     <div class="row align-items-center">
-                        <div class="col-sm-7">
-                            <div class="row align-items-center">
-                                <div class="col-sm-4">
+                        <div class="col-sm-9">
+                            <div class="row align-items-center  d-flex">
+                                <div class="col-sm-3">
 
-                                    <span class="">Plant </span>
-                                    <select id="plant_id" class="form-select mt-1 p-2" aria-label="Default select example">
+                                    <span class="" data-bs-toggle="tooltip" title="K1100">Plant</span>
+                                    <select id="plant_id" class="form-select mt-1 p-1" aria-label="Default select example">
                                     </select>
 
                                 </div>
 
-                                <div class="col-sm-4">
-                                    <span class="">Area </span>
-                                    <select id="Area_id" class="form-select mt-1 p-2" aria-label="Default select example">
+                                <div class="col-sm-3">
+                                    <span class="" data-bs-toggle="tooltip" title="K1003">Area</span>
+                                    <select id="Area_id" class="form-select mt-1 p-1" aria-label="Default select example">
                                     </select>
 
                                 </div>
-                                <div class="col-sm-4">
+                                <div class="col-sm-3">
 
-                                    <span>Component  </span>
-                                    <select id="component_id" class="form-select mt-1 p-2" aria-label="Default select example">
-                                    </select>
-
-                                </div>
-
-                                <div class="col-sm-4">
-
-                                    <span>Model </span>
-                                    <select id="model_id" class="form-select mt-1 p-2" aria-label="Default select example">
-                                    </select>
-
-                                </div>
-                                <div class="col-sm-4 ">
-
-                                    <span>Operation </span>
-                                    <select id="oper_id" class="form-select mt-1 p-2" aria-label="Default select example">
-                                    </select>
-
-                                </div>
-                                <div class="col-sm-4">
-
-                                    <span class="">Quadrant </span>
-
-                                    <select id="Quad_id" class="form-select mt-1 p-2" aria-label="Default select example">
+                                    <span data-bs-toggle="tooltip" title="K1100">Model </span>
+                                    <select id="model_id" class="form-select mt-1 p-1" aria-label="Default select example">
                                     </select>
 
                                 </div>
 
+                                <div class="col-sm-3">
 
+                                    <span data-bs-toggle="tooltip" title="K1005">Component</span>
+                                    <select id="component_id" class="form-select mt-1 p-1" aria-label="Default select example">
+                                    </select>
 
+                                </div>
+
+                                <div class="col-sm-3 ">
+
+                                    <span data-bs-toggle="tooltip" title="K1086">Operation</span>
+                                    <select id="oper_id" class="form-select mt-1 p-1" aria-label="Default select example">
+                                    </select>
+
+                                </div>
+                                <div class="col-sm-3 ">
+
+                                    <span data-bs-toggle="tooltip" title="K1001">Part Number</span>
+                                    <select id="part_no_id" class="form-select mt-1 p-1" aria-label="Default select example">
+                                    </select>
+
+                                </div>
+                                <div class="col-sm-3 ">
+
+                                    <span data-bs-toggle="tooltip" title="K1002">Part Description</span>
+                                    <select id="part_desc_id" class="form-select mt-1 p-1" aria-label="Default select example">
+                                    </select>
+
+                                </div>
+                                <div class="col-sm-3">
+
+                                    <span class="">Quadrant</span>
+
+                                    <select id="Quad_id" class="form-select mt-1 p-1" onchange='this.style.backgroundColor=this.options[this.selectedIndex].style.backgroundColor;this.style.color=this.options[this.selectedIndex].style.color' aria-label="Default select example">
+                                    </select>
+
+                                </div>
+                                <div class="col-sm-3">
+
+                                    <span class="">Type</span>
+
+                                    <select id="Type_ctq" class="form-select mt-1 p-1" aria-label="Default select example">
+                                        <option value="">All</option>
+                                        <option value="CTQ">CTQ</option>
+                                        <option value="CTQ_NA">Non CTQ</option>
+                                    </select>
+
+                                </div>
+                                <div class="col-sm-6">
+                                    <button type="button" id="BtnRefresh" class="btn btn-info mt-4 " onclick="">Refresh</button>
+                                    <button type="button" id="Btnclear" class="btn btn-warning mt-4" onclick="">Clear</button>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-sm-2 d-flex align-items-center justify-content-center">
-                            <button type="button" id="BtnRefresh" class="btn btn-info mt-4 " onclick="">Refresh</button>
+                        <!--<div class="col-sm-2 d-flex align-items-center justify-content-center">
 
-                        </div>
+
+                        </div>-->
                         <div class="col-sm-3 text-center" id="charRiskmatrix">
 
 
@@ -165,7 +194,7 @@
             </div>
             <div class="card my-4">
 
-                <div class="card-body py-2">
+                <div class="card-body py-1">
                     <div class="row align-items-center">
                         <div class="col-sm-12">
                             <div id="SetClassStatus" class=" d-flex mb-2 align-items-center justify-content-around">
@@ -184,12 +213,19 @@
 
 
                         <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
-                            <div class="bg-plant-title shadow-primary border-radius-lg pt-4 pb-3" id="plant_name">
+                            <div class="bg-plant-title shadow-primary border-radius-lg pt-2 pb-1" id="plant_name">
                                 <h6 class="text-white text-capitalize ps-3">Characteristics Overview of <span id="PlantTitle"></span></h6>
                             </div>
                         </div>
                         <div class="card-body ">
-
+                            <div class="button-wrapper">
+                                <button id="toggle-buttons" class="btn btn-primary">
+                                    <i class="fas fa-file-export"></i> <!-- Export Icon -->
+                                </button>
+                                <div id="export-buttons" style="display:none;">
+                                    <!-- DataTables buttons will be placed here -->
+                                </div>
+                            </div>
                             <table id="char-data-table" class="table align-items-center mb-0" style="width: 100%;">
 
                                 <colgroup>
@@ -207,8 +243,16 @@
                                 </colgroup>
                                 <thead>
                                     <tr>
-                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 px-1">Product & Charactrerisitic Description</th>
+                                        <!-- <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 px-1">Product & Charactrerisitic Description</th>-->
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 px-1 notexport">Charactrerisitic Description, Component, Model, Part Number & Description</th>
+
+                                        <!--<th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 px-1 d-none" >Charactrerisitic Description</th>
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 px-1 d-none" >Component</th>
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 px-1 d-none" >Model</th>
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 px-1 d-none" >Part Number</th>
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 px-1 d-none" >Description</th>-->
                                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 px-1">Operation</th>
+
                                         <th class=" text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 px-1">class</th>
 
                                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 px-1">Average</th>
@@ -221,6 +265,7 @@
                                     </tr>
                                 </thead>
                             </table>
+
                             <!-- </div> -->
                             <div id="myModal" class="modal fade bs-example-modal-lg" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-lg">
@@ -318,6 +363,7 @@
     <script src="../../assets/libs/datatables/buttons.print.min.js"></script>
     <script src="../../assets/libs/datatables/dataTables.keyTable.min.js"></script>
     <script src="../../assets/libs/datatables/dataTables.select.min.js"></script>
+    <!--<script src="../../assets/libs/datatables/buttons.colVis.min.js"></script>-->
     <script src="../../JS/Api_Call.js"></script>
     <script src="../../JS/QdasFunctions.js"></script>
     <script src="./characteristic.js"></script>
@@ -340,6 +386,8 @@
 
     <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
     <script src="../../assets/js/material-dashboard.min.js?v=3.0.4"></script>
+
+
 </body>
 
 </html>

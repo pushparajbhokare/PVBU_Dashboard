@@ -1,0 +1,146 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="apple-touch-icon"
+          sizes="76x76"
+          href="../../assets/img/apple-icon.png" />
+    <link rel="icon" type="image/png" href="../../assets/img/favicon.png" />
+    <title>QDAS Analytics Dashboard</title>
+    <!--     Fonts and icons     -->
+    <link href="../../../CSS/googleapis_family.css" rel="stylesheet" />
+    <!-- Nucleo Icons -->
+    <link href="../../assets/css/nucleo-icons.css" rel="stylesheet" />
+    <link href="../../assets/css/nucleo-svg.css" rel="stylesheet" />
+
+    <script src="../../assets/js/jquery-1.9.1.min.js"></script>
+    <!-- Datetime JQuery -->
+    <link href="../../JS/jquery-ui.css" rel="stylesheet" />
+    <link href="../../JS/smoothness-jquery-ui.css" rel="stylesheet" />
+    <script src="../../JS/jquery-ui.min.js"></script>
+
+    <!-- CSS Files -->
+    <link id="pagestyle"
+          href="../../assets/css/material-dashboard.css?v=3.0.4"
+          rel="stylesheet" />
+    <!-- additional custom CSS Files -->
+    <link id="customstyle"
+          href="../../assets/css/other_addition.css"
+          rel="stylesheet" />
+    <link id="customstyle" href="../../assets/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../assets/css/tata.css" />
+    <style>
+        .form-check-input:checked {
+            background-color: #0cbaba !important;
+            /* background-color: #1A73E8 !important; */
+        }
+
+        .table th {
+            white-space: nowrap;
+        }
+    </style>
+</head>
+
+<body class="g-sidenav-show bg-gray-200" code="SHOP_EXPLORER.VIEW_SHOP_EXPLORER">
+    <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 bg-gradient-dark"
+           id="sidenav-main">
+    </aside>
+    <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg">
+     
+
+        <div id="displayNAV"></div>
+
+         
+        <div class="container-fluid">
+
+            <div class="card-body  py-1">
+                <div class="row align-items-center">
+                 
+                    <div class="col-sm-6 pb-5">
+                        <h3>Power Train 1</h3>
+                        <div class="card">
+                            <!-- Card image -->
+                            <img src="turbo1.png" class="card-img-top" alt="Plant Image" style=" width: 500px; height: 450px;padding-left:50px">
+
+                            <!-- Card body -->
+                            <div class="card-body" style="background: lightgray; }">
+                                <h5 class="card-title">1.2L Turbo GDi petrol</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 pb-5">
+                        <h3>Power Train 2</h3>
+                        <div class="card">
+                            <!-- Card image -->
+                            <img src="turbo2.png" class="card-img-top" alt="Plant Image" style=" width: 500px; height: 450px; padding-left: 50px">
+
+                            <!-- Card body -->
+                            <div class="card-body" style="background: lightgray; }">
+                                <h5 class="card-title">1.5 Turbo GDi petrol</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--<div class="col-sm-4">
+
+                <span class="">Area </span>
+                <select id="Area_id" class="form-select mt-1 p-2" aria-label="Default select example">
+                </select>
+
+            </div>-->
+                    <!--<div class="col-sm-3">
+
+                <button type="button" class="btn btn-info mt-5 ml-4" id="btnRefresh">Refresh</button>
+
+            </div>-->
+
+                </div>
+
+            </div>
+
+
+            <!--<div class="row" style="margin: 0; padding: 0" id="Quad_container">
+
+            </div>
+        </div>
+        <hr class="dark horizontal" style="border: 1px solid #000" hidden />-->
+       
+</div>
+
+    </main>
+    <!-- <script src="../../assets/js/jquery-1.9.1.min.js"></script> -->
+    <script src="../../JS/moment.min.js"></script>
+
+    <!--Demo Application Helper Files-->
+    <script src="../../assets/js/quickActionDemo.js"></script>
+    <!--   Core JS Files   -->
+    <script src="../../assets/js/core/popper.min.js"></script>
+    <script src="../../assets/js/core/bootstrap.min.js"></script>
+    <script src="../../assets/js/plugins/perfect-scrollbar.min.js"></script>
+    <script src="../../assets/js/plugins/smooth-scrollbar.min.js"></script>
+    <script src="../../assets/js/plugins/chartjs.min.js"></script>
+    <script src="../../JS/Api_Call.js"></script>
+    <script src="../../JS/QdasFunctions.js"></script>
+    <script src="./plantstatus.js"></script>
+    <script>
+
+        var win = navigator.platform.indexOf("Win") > -1;
+        if (win && document.querySelector("#sidenav-scrollbar")) {
+            var options = {
+                damping: "0.5",
+            };
+            Scrollbar.init(document.querySelector("#sidenav-scrollbar"), options);
+        }
+
+    </script>
+    <!-- Github buttons -->
+    <script src="../../JS/buttons.github.io_buttons.js"></script>
+    <!--<script async defer src="https://buttons.github.io/buttons.js"></script>-->
+    <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+    <script src="../../assets/js/material-dashboard.min.js?v=3.0.4"></script>
+</body>
+</html>

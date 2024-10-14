@@ -1,6 +1,5 @@
 var quadrant;
-ShowPageDetails("page", "CVBU-Overview");
-
+ShowPageDetails("page", "PVBU-Overview");
 
 //**************************** Document Ready function *********************************//
 $(document).ready(function () {
@@ -53,6 +52,7 @@ function ProcessRefresh(UserData) {
 //**************************** CVBU_summary function *********************************//
 
 function CVBU_summary(quadrant, UserData) {
+    debugger
   Cvbuquad = {
     quad1: quadrant[0].plantQuad1,
     quad2: quadrant[0].plantQuad2,
@@ -63,11 +63,11 @@ function CVBU_summary(quadrant, UserData) {
    var cvbu_summary = `<div class="card">
    
     <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
-      <div class="bg-tata-title shadow-primary border-radius-lg pt-4 pb-3">
-        <h6 class="text-white text-capitalize ps-3">CVBU</h6>
+      <div class="bg-tata-title shadow-primary border-radius-lg pt-2 pb-1">
+        <h6 class="text-white text-capitalize ps-3">PVBU</h6>
       </div>
     </div>
-   
+   <div style="overflow-y:scroll;overflow-x:hidden;max-height:560px;">
     <div class="row mt-2 px-4 align-items-center">
     
     
@@ -99,7 +99,7 @@ function CVBU_summary(quadrant, UserData) {
     
         <div id="CTQ_Count" class="px-2"> </div>
      </div>
-    
+    </div>
     
     `;
 
@@ -128,7 +128,9 @@ function plant_summary(quadrant, i) {
     plants: quadrant[0].plant,
   };
 
-  var html = `
+    var html = `
+    <div style="padding-top:25px;overflow-y:scroll;overflow-x:hidden;max-height:470px;">
+
         <div class="card plant_card">
             <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
                 <a class="nav-link text-white" href="../plantStatus/index.html?plant=${
@@ -136,13 +138,14 @@ function plant_summary(quadrant, i) {
                 }&quad1=${Plantquad.quad1}&quad2=${Plantquad.quad2}&quad3=${
     Plantquad.quad3
   }&quad4=${Plantquad.quad4}">
-                    <div class="bg-plant-title shadow-primary border-radius-lg pt-4 pb-3 shadow-primary border-radius-lg pt-4 pb-3">
+                    <div class="bg-plant-title shadow-primary border-radius-lg pt-2 pb-1 shadow-primary border-radius-lg pt-2 pb-1">
                         <h6 class="text-white text-capitalize ps-3">${
                           Plantquad.plants
                         }</h6>
                     </div>
                 </a>
             </div>
+             
             <div class="row mt-4">
                 <div class="col-lg-12 px-4">
                     <div class="riskMatrix_tata text-center">
@@ -165,7 +168,9 @@ function plant_summary(quadrant, i) {
                         <hr class="dark horizontal m-0">
                     </div>
                 </div>
-            </div>
+         
+        </div>
+        </div>
         </div>
     `;
 
@@ -175,7 +180,63 @@ function plant_summary(quadrant, i) {
 
   LineChart(result, `chart-line${i + 1}`);
 }
+//**************************** Shope_summary function *********************************//
 
+function Shop_summary(quadrant, i) {
+    Plantquad = {
+        quad1: quadrant[0].plantQuad1,
+        quad2: quadrant[0].plantQuad2,
+        quad3: quadrant[0].plantQuad3,
+        quad4: quadrant[0].plantQuad4,
+        plants: quadrant[0].plant,
+    };
+
+    var html = `
+        <div class="card plant_card">
+            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                <a class="nav-link text-white" href="../ShopeExplorer/index.html?plant=${Plantquad.plants
+        }&quad1=${Plantquad.quad1}&quad2=${Plantquad.quad2}&quad3=${Plantquad.quad3
+        }&quad4=${Plantquad.quad4}">
+                    <div class="bg-plant-title shadow-primary border-radius-lg pt-2 pb-1 shadow-primary border-radius-lg pt-2 pb-1">
+                        <h6 class="text-white text-capitalize ps-3">${Plantquad.plants
+        }</h6>
+                    </div>
+                </a>
+            </div>
+               <div style="overflow-y:scroll;max-height:500px;">
+
+            <div class="row mt-4">
+                <div class="col-lg-12 px-4">
+                    <div class="riskMatrix_tata text-center">
+                        ${RiskMatrix_container(Plantquad, true)}
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-6 ">
+                    <div class="card-header p-0 position-relative mx-3 z-index-2 bg-transparent">
+                        <div class="bg-gradient-tata shadow-success border-radius-lg py-3 pe-1">
+                            <div class="chart">
+                                <canvas id="chart-line${i + 1
+        }" class="chart-canvas" height="230"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="mb-0">CTQ Trailing Trend</h6>
+                        <p class="text-sm">CTQ Monthly Performance</p>
+                        <hr class="dark horizontal m-0">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </di
+    `;
+
+    $("#plant_container").append(html);
+
+    var result = GetPlantData(quadrant);
+
+    LineChart(result, `chart-line${i + 1}`);
+}
 //**************************** WaterFlowChart function *********************************//
 
 function WaterFlowChart(jsonData) {
