@@ -7095,19 +7095,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\pushparaj.bhokare\\.nuget\\packages\\": {}
+    "C:\\Users\\Lenovo\\.nuget\\packages\\": {},
+    "C:\\Program Files\\DevExpress 23.2\\Components\\Offline Packages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Micraft Solution\\PVBU_Dashboard\\1_dotnetWebService\\dotnetWebService.csproj",
+      "projectUniqueName": "D:\\HEXAGON\\PVBU\\latest\\1_dotnetWebService\\dotnetWebService.csproj",
       "projectName": "dotnetWebService",
-      "projectPath": "D:\\Micraft Solution\\PVBU_Dashboard\\1_dotnetWebService\\dotnetWebService.csproj",
-      "packagesPath": "C:\\Users\\pushparaj.bhokare\\.nuget\\packages\\",
-      "outputPath": "D:\\Micraft Solution\\PVBU_Dashboard\\1_dotnetWebService\\obj\\",
+      "projectPath": "D:\\HEXAGON\\PVBU\\latest\\1_dotnetWebService\\dotnetWebService.csproj",
+      "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+      "outputPath": "D:\\HEXAGON\\PVBU\\latest\\1_dotnetWebService\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\DevExpress 23.2\\Components\\Offline Packages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\pushparaj.bhokare\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 23.2.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7115,6 +7120,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\DevExpress 23.2\\Components\\System\\Components\\Packages": {},
         "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
@@ -7199,24 +7205,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[6.0.33, 6.0.33]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[6.0.33, 6.0.33]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[6.0.33, 6.0.33]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[6.0.33, 6.0.33]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -7225,7 +7213,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   },
