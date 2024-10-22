@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("dotnetWebService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2c639417de7d8f431754e50bf98c80dd92966fd6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3a4552f570379e6e34f9fe43c96a47f56a61d4b7")]
 [assembly: System.Reflection.AssemblyProductAttribute("dotnetWebService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("dotnetWebService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

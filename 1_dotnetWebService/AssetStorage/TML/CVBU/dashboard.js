@@ -67,7 +67,7 @@ function CVBU_summary(quadrant, UserData) {
         <h6 class="text-white text-capitalize ps-3">PVBU</h6>
       </div>
     </div>
-   <div style="overflow-y:scroll;overflow-x:hidden;max-height:560px;">
+  <div style="padding-top: 25px;padding-bottom: 25%;overflow-y: scroll; overflow-x: hidden; height:100vh;">
     <div class="row mt-2 px-4 align-items-center">
     
     
@@ -129,8 +129,7 @@ function plant_summary(quadrant, i) {
   };
 
     var html = `
-    <div style="padding-top:25px;overflow-y:scroll;overflow-x:hidden;max-height:470px;">
-
+  <div style="padding-top: 25px;padding-bottom: 40%;overflow-y: scroll; overflow-x: hidden; height:100vh;">
         <div class="card plant_card">
             <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
                 <a class="nav-link text-white" href="../plantStatus/index.html?plant=${
